@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,26 +10,26 @@ export default function Home() {
         <nav>
           <ul>
             <li>
-              <a href="/docs">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/tutorials">All tutorials</a>
+              <Link href="/tutorials">All tutorials</Link>
             </li>
             <li>
-              <a href="/series">Series</a>
+              <Link href="/series">Series</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
+          <form action="/search" method="GET">
+            <input type="search" name="q" />
+            <button type="submit">Search</button>
+          </form>
         </nav>
-        <form action="/search" method="GET">
-          <input type="search" name="q" />
-          <button type="submit">Search</button>
-        </form>
       </header>
       <hr />
       <section className="content-wrapper">
