@@ -70,6 +70,18 @@ body {
       @apply hidden;
     }
 
+    section.newsletter {
+      @apply w-full lg:w-3/4 p-4 mx-auto text-center bg-gradient-to-br from-caribbean-green-400 to-caribbean-green-600 rounded-lg shadow-lg;
+
+      input {
+        @apply w-full p-2 my-2;
+      }
+
+      button {
+        @apply w-full p-2 my-2 border-2 border-white rounded-sm;
+      }
+    }
+
     footer {
       @apply text-center;
     }
