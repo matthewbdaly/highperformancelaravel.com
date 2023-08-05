@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="">
       <header>
-        <h1>High Performance Laravel</h1>
+        <h1 className="font-extrabold"><span className="text-caribbean-green-600">High Performance</span> Laravel</h1>
         <h2>Find, understand, and fix the <em>real</em> causes of performance issues with your Laravel applications</h2>
         <nav>
           <ul>
