@@ -6,6 +6,7 @@ body {
   @apply font-sans bg-white text-gray-600 dark:text-gray-300 dark:bg-black;
 
   main {
+    @apply w-full md:w-4/5 mx-auto px-4;
 
     h1, h2, h3, h4 {
       @apply py-2;
