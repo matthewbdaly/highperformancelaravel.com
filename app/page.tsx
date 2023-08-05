@@ -29,6 +29,22 @@ export default function Home() {
         </form>
       </header>
       <hr />
+      <section>
+        <h3>Struggling to make your application performant?</h3>
+        <p>Never miss a tutorial! Sign up for the newsletter below.</p>
+        <form action="/subscribe" method="POST">
+          <input type="text" name="first_name" autoComplete="given-name" placeholder="Your given (or first) name" />
+          <input type="email" name="email" placeholder="Your email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <hr />
+      <footer>
+        <div>
+          <p>Made with ❤️ by <a href="https://github.com/matthewbdaly">Matthew Daly</a></p>
+        </div>
+        <p>Copyright &copy; Matthew Daly {new Date().getFullYear()}</p>
+      </footer>
     </main>
   )
 }
