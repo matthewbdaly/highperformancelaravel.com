@@ -31,8 +31,8 @@ export default function Home() {
         </form>
       </header>
       <hr />
-      <section>
-        <div>
+      <section className="content-wrapper">
+        <div className="content">
           <h2>Welcome to High Performance Laravel!</h2>
           <h3>Supercharge your Laravel applications with expert performance optimization tips and strategies.</h3>
           <h4>Is your Laravel application running slower than you&apos;d like?</h4>

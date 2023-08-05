@@ -4,4 +4,32 @@
 
 main {
   @apply font-sans;
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  .content-wrapper {
+    @apply flex flex-wrap;
+
+    .content {
+      @apply flex-grow w-full md:w-2/3;
+    }
+
+    aside {
+      @apply w-full md:w-1/3;
+    }
+  }
 }
