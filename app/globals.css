@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans;
+  @apply font-sans bg-white text-gray-600 dark:text-gray-300 dark:bg-black;
 
   main {
 
     h1, h2, h3, h4 {
+      @apply py-2;
+
       em {
         @apply text-caribbean-green-600 not-italic;
       }
@@ -29,11 +31,19 @@ body {
       @apply text-xl font-bold leading-6;
     }
 
+    p {
+      @apply leading-6 py-2;
+    }
+
     .content-wrapper {
       @apply flex flex-wrap;
 
       .content {
         @apply flex-grow w-full md:w-2/3;
+
+        blockquote {
+          @apply w-full bg-caribbean-green-50 border-caribbean-green-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-600 rounded-r-lg;
+        }
       }
 
       aside {

@@ -36,10 +36,12 @@ export default function Home() {
         <div className="content">
           <h2>Welcome to High Performance Laravel!</h2>
           <h3>Supercharge your Laravel applications with expert performance optimization tips and strategies.</h3>
-          <h4>Is your Laravel application running slower than you&apos;d like?</h4>
-          <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
-          <h4>Unlock the full potential of your Laravel code.</h4>
-          <p>As a fellow developer, I know the pain points and common issues that can slow down your Laravel application. Through High Performance Laravel, I offer clear solutions and actionable advice to help you optimize your code, boost performance, and leave your competition behind.</p>
+          <blockquote>
+            <h4>Is your Laravel application running slower than you&apos;d like?</h4>
+            <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
+            <h4>Unlock the full potential of your Laravel code.</h4>
+            <p>As a fellow developer, I know the pain points and common issues that can slow down your Laravel application. Through High Performance Laravel, I offer clear solutions and actionable advice to help you optimize your code, boost performance, and leave your competition behind.</p>
+          </blockquote>
           <h4>Stay ahead of the game with performance optimization tips.</h4>
           <p>In today&apos;s fast-paced digital world, performance matters. Slow-loading websites and applications can drive users away and harm your clients&apos; business. That&apos;s why I&apos;ve created a wide range of articles and tutorials on performance optimization, including database optimization, caching strategies, query optimization, and more. By breaking down complex concepts into digestible steps, I make it easy for you to implement these optimizations and improve your app&apos;s speed and efficiency.</p>
           <h4>Level up your skills and optimize your Laravel applications.</h4>
