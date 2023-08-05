@@ -65,9 +65,13 @@ body {
         @apply w-full md:w-1/3;
       }
     }
-  }
 
-  hr {
-    @apply hidden;
+    hr {
+      @apply hidden;
+    }
+
+    footer {
+      @apply text-center;
+    }
   }
 }
