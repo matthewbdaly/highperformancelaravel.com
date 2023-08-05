@@ -41,7 +41,7 @@ body {
         @apply flex items-center justify-between;
 
         ul {
-          @apply flex space-x-4 font-bold;
+          @apply hidden md:flex space-x-4 font-bold;
 
           li a {
             @apply hover:text-caribbean-green-600 pb-2 hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200;

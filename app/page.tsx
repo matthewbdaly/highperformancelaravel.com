@@ -8,7 +8,7 @@ export default function Home() {
         <h1><em>High Performance</em> Laravel</h1>
         <h2>Find, understand, and fix the <em>real</em> causes of performance issues with your Laravel applications</h2>
         <nav>
-          <ul className="flex space-x-4 font-bold">
+          <ul>
             <li>
               <Link href="/">Home</Link>
             </li>
