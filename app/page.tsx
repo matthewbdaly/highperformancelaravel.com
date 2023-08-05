@@ -33,33 +33,36 @@ export default function Home() {
       <hr />
       <section>
         <div>
-          <section>
-            <p>Do you struggle to make your Laravel applications perform well?</p>
-            <p>Do you find it hard to figure out what advice is and isn&apos;t helpful when optimising the performance of your applications?</p>
-            <p>Are you unsure where to begin analysing performance bottlenecks?</p>
-            <p>High Performance Laravel is here to help.</p>
-            <p>Based on over a decade&apos;s experience building web apps, API&apos;s and mobile apps, I&apos;ll teach you about the real reasons your web application is slow, and provide straightforward tips to resolve them. I&apos;ll help you to:</p>
-            <ul>
-              <li>Avoid common misconceptions about web application performance</li>
-              <li>Understand the real reasons for performance bottlenecks in most applications</li>
-              <li>Learn to apply profiling techniques to find performance issues</li>
-              <li>Resolve common performance issues</li>
-              <li>Optimise your server configuration to improve performance</li>
-              <li>Write more efficient code</li>
-              <li>Make your front end more efficient</li>
-            </ul>
-          </section>
+          <h2>Welcome to High Performance Laravel!</h2>
+          <h3>Supercharge your Laravel applications with expert performance optimization tips and strategies.</h3>
+          <h4>Is your Laravel application running slower than you&apos;d like?</h4>
+          <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
+          <h4>Unlock the full potential of your Laravel code.</h4>
+          <p>As a fellow developer, I know the pain points and common issues that can slow down your Laravel application. Through High Performance Laravel, I offer clear solutions and actionable advice to help you optimize your code, boost performance, and leave your competition behind.</p>
+          <h4>Stay ahead of the game with performance optimization tips.</h4>
+          <p>In today&apos;s fast-paced digital world, performance matters. Slow-loading websites and applications can drive users away and harm your clients&apos; business. That&apos;s why I&apos;ve created a wide range of articles and tutorials on performance optimization, including database optimization, caching strategies, query optimization, and more. By breaking down complex concepts into digestible steps, I make it easy for you to implement these optimizations and improve your app&apos;s speed and efficiency.</p>
+          <h4>Level up your skills and optimize your Laravel applications.</h4>
+          <p>My goal is to empower you to become a performance optimization expert. Whether you&apos;re a beginner or an experienced Laravel developer, High Performance Laravel offers valuable insights, best practices, and real-world examples that will help you unlock the full potential of your Laravel code. From optimizing your database queries to implementing caching mechanisms, you&apos;ll find actionable steps to improve your application&apos;s performance.</p>
+          <h4>Ready to supercharge your Laravel application?</h4>
+          <p>Take the first step towards optimizing your Laravel application today. Explore my blog and discover practical tips, expert insights, and actionable advice to unlock the true potential of your Laravel code. With High Performance Laravel as your guide, you&apos;ll be well-equipped to build lightning-fast Laravel applications that will impress your users and give your clients&apos; websites a competitive edge.</p>
+          <h3>Optimize your Laravel applications&apos; performance today. Explore High Performance Laravel now.</h3>
         </div>
         <aside>
+          <p>Do you struggle to make your Laravel applications perform well?</p>
+          <p>Do you find it hard to figure out what advice is and isn&apos;t helpful when optimising the performance of your applications?</p>
+          <p>Are you unsure where to begin analysing performance bottlenecks?</p>
+          <p>High Performance Laravel is here to help.</p>
           <h4>Hello, I&apos;m Matthew Daly</h4>
           <p>I&apos;m a professional web developer with over ten years of experience building high performance web applications with numerous frameworks and programming languages.</p>
-          <p>On this site I&apos;ll show you how to:</p>
+          <p>I&apos;ll teach you about the real reasons your web application is slow, and provide straightforward tips to resolve them. I&apos;ll help you to:</p>
           <ul>
-            <li>Design your Laravel application to avoid common bottlenecks and performance issues</li>
-            <li>Diagnose and resolve performance issues with existing applications</li>
-            <li>Write more efficient database queries, and optimise your database structure to improve performance</li>
-            <li>Optimize your production servers to improve performance</li>
-            <li>Sort the myths about application performance from the real issues so you don&apos;t waste time on fruitless optimization strategies</li>
+            <li>Avoid common misconceptions about web application performance</li>
+            <li>Understand the real reasons for performance bottlenecks in most applications</li>
+            <li>Learn to apply profiling techniques to find performance issues</li>
+            <li>Resolve common performance issues</li>
+            <li>Optimise your server configuration to improve performance</li>
+            <li>Write more efficient code</li>
+            <li>Make your front end more efficient</li>
           </ul>
         </aside>
       </section>
@@ -76,6 +79,8 @@ export default function Home() {
       </section>
       <hr />
       <footer>
+        <section>
+        </section>
         <div>
           <p>Made with ❤️ by <a href="https://matthewdaly.co.uk">Matthew Daly</a></p>
         </div>
