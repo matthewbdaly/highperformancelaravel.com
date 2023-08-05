@@ -5,7 +5,7 @@ export default function Home() {
     <main className="">
       <header>
         <h1>High Performance Laravel</h1>
-        <h2>Find and fix the <strong>real</strong> causes of performance issues with your Laravel applications</h2>
+        <h2>Find, understand, and fix the <em>real</em> causes of performance issues with your Laravel applications</h2>
         <nav>
           <ul>
             <li>
@@ -31,20 +31,38 @@ export default function Home() {
         </form>
       </header>
       <hr />
-      <article>
-      </article>
-      <aside>
-        <h4>Hello, I&apos;m Matthew Daly</h4>
-        <p>I&apos;m a professional web developer with over ten years of experience building high performance web applications with numerous frameworks and programming languages.</p>
-        <p>On this site I&apos;ll show you how to:</p>
-        <ul>
-          <li>Design your Laravel application to avoid common bottlenecks and performance issues</li>
-          <li>Diagnose and resolve performance issues with existing applications</li>
-          <li>Write more efficient database queries, and optimise your database structure to improve performance</li>
-          <li>Optimize your production servers to improve performance</li>
-          <li>Sort the myths about application performance from the real issues so you don&apos;t waste time on fruitless optimization strategies</li>
-        </ul>
-      </aside>
+      <section>
+        <div>
+          <section>
+            <p>Do you struggle to make your Laravel applications perform well?</p>
+            <p>Do you find it hard to figure out what advice is and isn&apos;t helpful when optimising the performance of your applications?</p>
+            <p>Are you unsure where to begin analysing performance bottlenecks?</p>
+            <p>High Performance Laravel is here to help.</p>
+            <p>Based on over a decade&apos;s experience building web apps, API&apos;s and mobile apps, I&apos;ll teach you about the real reasons your web application is slow, and provide straightforward tips to resolve them. I&apos;ll help you to:</p>
+            <ul>
+              <li>Avoid common misconceptions about web application performance</li>
+              <li>Understand the real reasons for performance bottlenecks in most applications</li>
+              <li>Learn to apply profiling techniques to find performance issues</li>
+              <li>Resolve common performance issues</li>
+              <li>Optimise your server configuration to improve performance</li>
+              <li>Write more efficient code</li>
+              <li>Make your front end more efficient</li>
+            </ul>
+          </section>
+        </div>
+        <aside>
+          <h4>Hello, I&apos;m Matthew Daly</h4>
+          <p>I&apos;m a professional web developer with over ten years of experience building high performance web applications with numerous frameworks and programming languages.</p>
+          <p>On this site I&apos;ll show you how to:</p>
+          <ul>
+            <li>Design your Laravel application to avoid common bottlenecks and performance issues</li>
+            <li>Diagnose and resolve performance issues with existing applications</li>
+            <li>Write more efficient database queries, and optimise your database structure to improve performance</li>
+            <li>Optimize your production servers to improve performance</li>
+            <li>Sort the myths about application performance from the real issues so you don&apos;t waste time on fruitless optimization strategies</li>
+          </ul>
+        </aside>
+      </section>
       <hr />
       <section>
         <h3>Struggling to make your application performant?</h3>
