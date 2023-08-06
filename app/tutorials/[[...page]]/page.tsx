@@ -16,8 +16,8 @@ export const metadata: Metadata ={
   }
 }
 
-export default function Page({ params }: { params: { page: number }}): ReactElement {
-  const entries = getAllTutorials().slice((params.page - 1) * PageSize, params.page * PageSize);
+export default function Page({ params }: { params: { page?: number }}): ReactElement {
+  const entries = getAllTutorials().slice(((params.page || 1) - 1) * PageSize, (params.page || 1) * PageSize);
 
   return (
     <main>
