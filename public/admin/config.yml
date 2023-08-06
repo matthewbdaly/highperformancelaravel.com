@@ -1,8 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
+  repo: matthewbdaly/next-site-rewrite
+publish_mode: editorial_workflow
 show_preview_links: false
-display_url: https://highperformancelaravel.com
+display_url: https://creative-froyo-b002f8.netlify.app/
 locale: 'en'
 media_folder: "public/img"
 public_folder: "img"
