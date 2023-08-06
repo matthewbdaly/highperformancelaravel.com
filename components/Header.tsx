@@ -15,7 +15,7 @@ export default function Header(): ReactElement {
             <Link href="/tutorials">All tutorials</Link>
           </li>
           <li>
-            <Link href="/series">Series</Link>
+            <Link href="/tutorials/series">Series</Link>
           </li>
           <li>
             <Link href="/about">About</Link>
