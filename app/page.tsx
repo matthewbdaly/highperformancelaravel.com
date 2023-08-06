@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="">
       <header>
-        <h1><em>High Performance</em> Laravel</h1>
+        <h1><Link href="/"><em>High Performance</em> Laravel</Link></h1>
         <h2>Find, understand, and fix the <em>real</em> causes of performance issues with your Laravel applications</h2>
         <nav>
           <ul>
