@@ -54,7 +54,7 @@ export default async function Page({
       <Header />
       <hr />
       <article className="grow w-full lg:w-2.3 flex flex-row flex-wrap pt-8">
-        {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-sky-700 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
+        {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-600 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
         <TextSection data={data}>
           {content}
         </TextSection>
