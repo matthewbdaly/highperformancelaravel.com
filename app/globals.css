@@ -47,7 +47,7 @@
       }
 
       pre code {
-        @apply bg-black text-white rounded block float-left p-8 w-full relative my-8 shadow-lg;
+        @apply bg-black text-white rounded block float-left px-8 w-full relative shadow-lg;
         -webkit-overflow-scrolling: touch;
         overflow: initial;
         overflow-x: auto;
