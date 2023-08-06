@@ -1,7 +1,7 @@
+import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import NewsletterForm from "@/components/NewsletterForm";
-import Sidebar from "@/components/Sidebar";
 import { getAllSeries } from "@/lib/functions";
 import { Metadata } from "next";
 import { ReactElement } from "react";
@@ -21,13 +21,10 @@ export default function Page(): ReactElement {
     <main className="">
       <Header />
       <hr />
-      <section className="content-wrapper">
-        <div className="content">
-          {series.map(entry => (
-            <p key={entry.slug}><a href={`/tutorials/series/${entry.slug}`}>{entry.title}</a></p>
-          ))}
-        </div>
-        <Sidebar />
+      <section className="w-full flex flex-row flex-wrap pt-8">
+        {series.map(entry => (
+          <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entry} />
+        ))}
       </section>
       <hr />
       <NewsletterForm />
