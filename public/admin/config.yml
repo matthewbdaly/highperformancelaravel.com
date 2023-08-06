@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+show_preview_links: false
+display_url: https://highperformancelaravel.com
+locale: 'en'
+media_folder: "public/img"
+public_folder: "img"
+collections:
+  - name: "tutorials" # Used in routes, e.g., /admin/collections/blog
+    label: "Tutorials" # Used in the UI
+    label_singular: "Tutorial"
+    folder: "content/tutorials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "tutorials/series/{{series}}/{{slug}}"
+    show_preview_links: true
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Series", name: "series", widget: "list", required: false, allow_add: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Featured image", name: "featured_image", widget: "image"}
+      - {label: "Featured image username", name: "featured_image_username", widget: "string"}
+    sortableFields: ["date", "title", "description", "body", "series"]
+    summary: "{{title}} - {{commit_author}}"
