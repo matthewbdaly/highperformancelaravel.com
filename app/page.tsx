@@ -2,7 +2,6 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import NewsletterForm from '@/components/NewsletterForm'
 import Sidebar from '@/components/Sidebar'
-import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -33,7 +32,6 @@ export default function Home() {
       <NewsletterForm />
       <hr />
       <Footer />
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </main>
   )
 }
