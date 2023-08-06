@@ -6,7 +6,8 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     appDir: true,
-    mdxRs: false
+    mdxRs: false,
+    typedRoutes: true
   }
 }
 
