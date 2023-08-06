@@ -1,36 +1,11 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
-import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className="">
-      <header>
-        <h1><Link href="/"><em>High Performance</em> Laravel</Link></h1>
-        <h2>Find, understand, and fix the <em>real</em> causes of performance issues with your Laravel applications</h2>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/tutorials">All tutorials</Link>
-            </li>
-            <li>
-              <Link href="/series">Series</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-          <form action="/search" method="GET">
-            <input type="search" name="q" placeholder="Search for..." className="p-2 rounded-lg ring-2 ring-gray-500 ring-inset" />
-            <button type="submit" className="bg-caribbean-green-600 hover:bg-caribbean-green-700 active:bg-caribbean-green-800 text-white rounded-lg p-2 ml-2">Search</button>
-          </form>
-        </nav>
-      </header>
+      <Header />
       <hr />
       <section className="content-wrapper">
         <div className="content">
@@ -64,14 +39,7 @@ export default function Home() {
         <p>You can unsubscribe at any time, and your information will not be shared.</p>
       </section>
       <hr />
-      <footer>
-        <section>
-        </section>
-        <div>
-          <p>Made with ❤️ by <a href="https://matthewdaly.co.uk">Matthew Daly</a></p>
-        </div>
-        <p>Copyright &copy; Matthew Daly {new Date().getFullYear()}</p>
-      </footer>
+      <Footer />
     </main>
   )
 }
