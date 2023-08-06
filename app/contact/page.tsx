@@ -16,7 +16,7 @@ export const metadata: Metadata ={
 
 export default function Page(): ReactElement {
   return (
-    <main className="">
+    <main>
       <Header />
       <hr />
       <section className="content-wrapper">

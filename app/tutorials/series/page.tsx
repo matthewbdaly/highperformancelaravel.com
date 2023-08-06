@@ -18,7 +18,7 @@ export default function Page(): ReactElement {
   const series = getAllSeries();
 
   return (
-    <main className="">
+    <main>
       <Header />
       <hr />
       <section className="w-full flex flex-row flex-wrap pt-8">
