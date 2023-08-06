@@ -28,6 +28,7 @@
     "@types/mapbox__rehype-prism": "^0.8.0",
     "gray-matter": "^4.0.3",
     "next-mdx-remote": "^4.4.1",
+    "prism-oceanic-next": "^1.0.0",
     "prismjs": "^1.29.0",
     "slugify": "^1.6.6"
   }

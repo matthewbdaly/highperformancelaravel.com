@@ -1,89 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "prism-oceanic-next";
 
-body {
-  @apply font-sans bg-gray-50 text-gray-600 dark:text-gray-100 dark:bg-black;
+@layer base {
+  body {
+    @apply font-sans bg-gray-50 text-gray-600 dark:text-gray-100 dark:bg-black;
 
-  main {
-    @apply w-full md:w-4/5 mx-auto px-4;
+    main {
+      @apply w-full md:w-4/5 mx-auto px-4;
 
-    h1, h2, h3, h4 {
-      @apply py-2;
+      h1, h2, h3, h4 {
+        @apply py-2;
 
-      em {
-        @apply text-caribbean-green-600 not-italic;
+        em {
+          @apply text-caribbean-green-600 not-italic;
+        }
       }
-    }
 
-    h1 {
-      @apply text-4xl font-extrabold leading-8;
-    }
+      h1 {
+        @apply text-4xl font-extrabold leading-8;
+      }
 
-    h2 {
-      @apply text-3xl font-bold leading-8;
-    }
+      h2 {
+        @apply text-3xl font-bold leading-8;
+      }
 
-    h3 {
-      @apply text-2xl font-bold leading-6;
-    }
+      h3 {
+        @apply text-2xl font-bold leading-6;
+      }
 
-    h4 {
-      @apply text-xl font-bold leading-6;
-    }
+      h4 {
+        @apply text-xl font-bold leading-6;
+      }
 
-    p {
-      @apply leading-6 py-2;
-    }
+      p {
+        @apply leading-6 py-2;
+      }
 
-    header {
-      nav {
-        @apply flex items-center justify-between;
+      code {
+        @apply text-red-600;
+      }
 
-        ul {
-          @apply hidden md:flex space-x-4 font-bold;
+      p > code, li > code {
+        @apply whitespace-pre-wrap break-words;
+      }
 
-          li a {
-            @apply hover:text-caribbean-green-600 pb-2 hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200;
+      pre code {
+        @apply bg-black text-white rounded block float-left p-8 w-full relative my-8 shadow-lg;
+        -webkit-overflow-scrolling: touch;
+        overflow: initial;
+        overflow-x: auto;
+      }
+
+      header {
+        nav {
+          @apply flex items-center justify-between;
+
+          ul {
+            @apply hidden md:flex space-x-4 font-bold;
+
+            li a {
+              @apply hover:text-caribbean-green-600 pb-2 hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200;
+            }
           }
         }
       }
-    }
 
-    .content-wrapper {
-      @apply flex flex-wrap;
+      .content-wrapper {
+        @apply flex flex-wrap;
 
-      .content {
-        @apply flex-grow w-full lg:w-2/3;
+        .content {
+          @apply flex-grow w-full lg:w-2/3;
 
-        blockquote {
-          @apply w-full bg-caribbean-green-50 border-caribbean-green-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-600 rounded-r-lg;
+          blockquote {
+            @apply w-full bg-caribbean-green-50 border-caribbean-green-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-600 rounded-r-lg;
+          }
+        }
+
+        aside {
+          @apply w-full lg:w-1/3;
         }
       }
 
-      aside {
-        @apply w-full lg:w-1/3;
-      }
-    }
-
-    hr {
-      @apply hidden;
-    }
-
-    section.newsletter {
-      @apply w-full lg:w-3/4 p-4 mx-auto text-center bg-gradient-to-br from-caribbean-green-400 to-caribbean-green-600 rounded-lg shadow-lg;
-
-      input {
-        @apply w-full p-2 my-2;
+      hr {
+        @apply hidden;
       }
 
-      button {
-        @apply w-full p-2 my-2 border-2 border-white rounded-sm;
-      }
-    }
+      section.newsletter {
+        @apply w-full lg:w-3/4 p-4 mx-auto text-center bg-gradient-to-br from-caribbean-green-400 to-caribbean-green-600 rounded-lg shadow-lg;
 
-    footer {
-      @apply text-center;
+        input {
+          @apply w-full p-2 my-2;
+        }
+
+        button {
+          @apply w-full p-2 my-2 border-2 border-white rounded-sm;
+        }
+      }
+
+      footer {
+        @apply text-center;
+      }
     }
   }
 }
