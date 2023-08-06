@@ -45,3 +45,17 @@ export const getAllTutorials = (): Array<PostFileProps> => {
     })
 };
 
+export const getTutorialFilenames = () : Array<{params: {series: string, slug: string}}> => {
+  const fileNames = fs.readdirSync(tutorialsDirectory)
+  return fileNames.map(fileName => {
+    const fullPath = path.join(process.cwd(), `content/tutorials/${fileName}`);
+    const source = fs.readFileSync(fullPath);
+    const { data } = matter(source);
+    return {
+      params: {
+        series: slugify(data.series.toLowerCase()),
+        slug: fileName.replace(/.md$/, "")
+      }
+    };
+  });
+};
