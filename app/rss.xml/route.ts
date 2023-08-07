@@ -1,4 +1,4 @@
-import { getAllTutorials } from '@/lib/functions';
+import { PostFileProps, getAllTutorials } from '@/lib/functions';
 import { Feed } from 'feed';
 
 export async function GET(req: Request): Promise<Response> {
@@ -28,20 +28,18 @@ export async function GET(req: Request): Promise<Response> {
     link: "https://highperformance.laravel.com"
   })
 
-  getAllTutorials().sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(tutorial => {
+  getAllTutorials()
+  .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+  .forEach((tutorial: PostFileProps) => {
     feed.addItem({
       title: tutorial.title,
       id: `https://highperformance.laravel.com/tutorials/series/${tutorial.slug}`,
-        link: `https://highperformance.laravel.com/tutorials/series/${tutorial.slug}`,
-        date: new Date(tutorial.date),
-      content: tutorial.description,
-      author: {
-        name: "Matthew Daly",
-        email: "hello@highperformance.laravel.com",
-        link: "https://highperformance.laravel.com"
-      }
-    })
-  })
+      link: `https://highperformance.laravel.com/tutorials/series/${tutorial.slug}`,
+      date: new Date(tutorial.date),
+      content: tutorial.description
+    });
+  });
+
 
   return new Response(feed.rss2(), { headers: { "content-type": "application/rss+xml" } })
 }
