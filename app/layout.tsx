@@ -24,7 +24,18 @@ export const metadata: Metadata = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#bfdbfe' },
     { media: '(prefers-color-scheme: dark)', color: '#172554' },
-  ]
+  ],
+   alternates: {
+    canonical: 'https://highperformancelaravel.com',
+    languages: {
+      'en-GB': 'https://highperformancelaravel.com',
+    },
+    types: {
+      'application/rss+xml': 'https://highperformancelaravel.com/rss.xml',
+      'application/atom+xml': 'https://highperformancelaravel.com/atom.xml',
+      'application/json': 'https://highperformancelaravel.com/feed.json',
+    },
+  },
 }
 
 export default function RootLayout({
