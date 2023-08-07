@@ -2,5 +2,5 @@ import { getFeed } from "@/lib/functions"
 
 export async function GET(req: Request): Promise<Response> {
   const feed = getFeed();
-  return new Response(feed.rss2(), { headers: { "content-type": "application/rss+xml" } })
+  return new Response(feed.json1(), { headers: { "content-type": "application/feed+json" } })
 }
