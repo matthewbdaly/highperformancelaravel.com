@@ -5,8 +5,10 @@ import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
+
 export const metadata: Metadata = {
-  metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
+  metadataBase: baseUrl,
   title: `High Performance Laravel`,
   description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
   robots: {
@@ -26,14 +28,14 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: dark)', color: '#172554' },
   ],
    alternates: {
-    canonical: 'https://highperformancelaravel.com',
+    canonical: baseUrl,
     languages: {
-      'en-GB': 'https://highperformancelaravel.com',
+      'en-GB': baseUrl
     },
     types: {
-      'application/rss+xml': 'https://highperformancelaravel.com/rss.xml',
-      'application/atom+xml': 'https://highperformancelaravel.com/atom.xml',
-      'application/json': 'https://highperformancelaravel.com/feed.json',
+      'application/rss+xml': `${baseUrl}rss.xml`,
+      'application/atom+xml': `${baseUrl}atom.xml`,
+      'application/json': `${baseUrl}feed.json`
     },
   },
 }

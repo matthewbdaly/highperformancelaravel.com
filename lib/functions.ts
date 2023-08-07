@@ -62,30 +62,31 @@ export const getTutorialFilenames = () : Array<{params: {series: string, slug: s
 };
 
 export const getFeed = () => {
-   const feed = new Feed({
+  const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
+  const feed = new Feed({
     title: "High Performance Laravel",
     description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
-    id: "https://highperformance.laravel.com",
-    link: "https://highperformance.laravel.com",
+    id: baseUrl.href,
+    link: baseUrl.href,
     language: "en",
     copyright: `All rights reserved Matthew Daly ${new Date().getFullYear()}`,
     generator: "NextJS",
     author: {
       name: "Matthew Daly",
       email: "hello@highperformance.laravel.com",
-      link: "https://highperformance.laravel.com"
+      link: baseUrl.href
     },
-    favicon: `https://highperformancelaravel.com/favicon-32x32.png`,
-      feedLinks: {
-      json: "https://highperformancelaravel.com/feed.json",
-      rss: "https://highperformancelaravel.com/rss.xml",
-      atom: "https://highperformancelaravel.com/atom.xml"
+    favicon: `${baseUrl.href}favicon-32x32.png`,
+    feedLinks: {
+      json: `${baseUrl.href}feed.json`,
+      rss: `${baseUrl.href}rss.xml`,
+      atom: `${baseUrl.href}atom.xml`
     },
   })
   feed.addContributor({
     name: "Matthew Daly",
     email: "hello@highperformance.laravel.com",
-    link: "https://highperformance.laravel.com"
+    link: baseUrl.href
   })
 
   getAllTutorials()
@@ -93,8 +94,8 @@ export const getFeed = () => {
   .forEach((tutorial: PostFileProps) => {
     feed.addItem({
       title: tutorial.title,
-      id: `https://highperformance.laravel.com/tutorials/series/${tutorial.slug}`,
-      link: `https://highperformance.laravel.com/tutorials/series/${tutorial.slug}`,
+      id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
+      link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       date: new Date(tutorial.date),
       content: tutorial.description
     });
