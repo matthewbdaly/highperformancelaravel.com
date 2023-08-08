@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useEffect, useMemo, useState } from "react";
 import Fuse from "fuse.js";
 
 interface SearchItem {
@@ -12,7 +12,8 @@ interface SearchItem {
 
 export default function Search(): ReactElement {
   const [searchResults, setSearchResults] = useState<Fuse.FuseResult<SearchItem>[]>([]);
-  const fuse = new Fuse([], { keys: ["title", "description", "series"], shouldSort: true });
+
+  const fuse = useMemo(() => new Fuse([], { keys: ["title", "description", "series"], shouldSort: true }), []);
 
   useEffect(() => {
     fetch('/search.json')
@@ -45,3 +46,4 @@ export default function Search(): ReactElement {
     </form>
   )
 }
+
