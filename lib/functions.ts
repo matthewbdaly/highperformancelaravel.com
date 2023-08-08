@@ -97,7 +97,8 @@ export const getFeed = () => {
       id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       date: new Date(tutorial.date),
-      content: tutorial.description
+      content: tutorial.description,
+      image: `${baseUrl.href}${tutorial.featured_image}`
     });
   });
   return feed;
