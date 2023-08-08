@@ -31,7 +31,7 @@ export default function Search(): ReactElement {
       {searchResults.length > 0 && (
   <ul>
     {searchResults.map(result => (
-      <li key={result.item.title}>{result.item.title}</li>
+      <a href={result.item.link} key={result.item.link}><li>{result.item.title}</li></a>
     ))}
   </ul>
 )}
