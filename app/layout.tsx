@@ -1,9 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Script from 'next/script'
-
-const inter = Inter({ subsets: ['latin'] })
 
 const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
@@ -48,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-      <body className="">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
