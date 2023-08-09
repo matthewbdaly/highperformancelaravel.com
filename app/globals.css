@@ -58,10 +58,14 @@
           @apply flex items-center justify-between;
 
           ul {
-            @apply hidden md:flex space-x-4 font-bold;
+            @apply flex flex-col py-2 md:py-0 md:flex-row md:space-x-4 font-bold;
 
-            li a {
-              @apply hover:text-caribbean-green-600 pb-2 hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200;
+            li {
+              @apply border-b-2 py-2 md:border-b-0 md:py-0 text-center md:text-left block md:inline w-full md:w-auto;
+
+              a {
+                @apply hover:text-caribbean-green-600 pb-2 md:hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200 block md:inline w-full md:w-auto;
+              }
             }
           }
 
