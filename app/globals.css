@@ -64,6 +64,14 @@
               @apply hover:text-caribbean-green-600 pb-2 hover:border-b-4 hover:border-caribbean-green-600 duration-200 delay-200;
             }
           }
+
+          form ul {
+            @apply space-x-0 z-10 absolute bg-gray-50 shadow-lg grid grid-cols-1;
+
+            li {
+              @apply border-2 border-gray-300 p-2;
+            }
+          }
         }
       }
 
