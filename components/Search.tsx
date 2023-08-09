@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useEffect, useMemo, useState } from "react";
+import { FormEvent, ReactElement, useEffect, useMemo, useState } from "react";
 import Fuse from "fuse.js";
 
 interface SearchItem {
@@ -33,9 +33,8 @@ export default function Search(): ReactElement {
   };
 
   return (
-    <form action="/search" method="GET">
+    <form onSubmit={(e: FormEvent) => e.preventDefault()}>
       <input type="search" name="q" placeholder="Search for..." className="p-2 rounded-lg ring-2 ring-gray-500 ring-inset" onChange={handleSearch} />
-      <button type="submit" className="bg-caribbean-green-600 hover:bg-caribbean-green-700 active:bg-caribbean-green-800 text-white rounded-lg p-2 ml-2">Search</button>
       {searchResults.length > 0 && (
         <ul>
           {searchResults.map(result => (
