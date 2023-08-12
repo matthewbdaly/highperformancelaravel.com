@@ -59,8 +59,8 @@ export default async function Page({
           <TextSection data={data}>
             {content}
           </TextSection>
-          <Sidebar />
         </article>
+        <Sidebar />
       </section>
       <hr />
       <NewsletterForm />
