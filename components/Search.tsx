@@ -34,7 +34,7 @@ export default function Search(): ReactElement {
 
   return (
     <form onSubmit={(e: FormEvent) => e.preventDefault()}>
-      <input type="search" name="q" placeholder="Search for..." className="p-2 rounded-lg ring-2 ring-gray-500 ring-inset" onChange={handleSearch} />
+      <input type="search" name="q" placeholder="Search for..." className="p-2 rounded-lg ring-2 ring-gray-500 ring-inset w-full md:w-auto" onChange={handleSearch} />
       {searchResults.length > 0 && (
         <ul>
           {searchResults.map(result => (
