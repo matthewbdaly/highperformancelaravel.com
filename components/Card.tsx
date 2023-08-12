@@ -25,7 +25,8 @@ const Card: FC<Props> = ({ title, description, href, slug, series, featured_imag
               title={featured_image_username ? `Photo by ${featured_image_username} on Unsplash` : ''} 
               className="w-full h-64 object-cover object-center"
               fill={true}
-              quality={30}
+              quality={10}
+              priority={true}
               sizes="400px"
             />
           </div>
