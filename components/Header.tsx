@@ -40,7 +40,7 @@ export default function Header(): ReactElement {
           </svg>
         </button>
       </div>
-      <nav className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
+      <nav className={`${isMenuOpen ? "block md:flex" : "hidden md:flex"}`}>
         <ul>
           <li>
             <Link href="/">Home</Link>
