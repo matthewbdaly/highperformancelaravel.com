@@ -75,5 +75,3 @@ export function generateStaticParams(): Array<{series: string}> {
     return { series: item.slug};
   });
 }
-
-export const dynamicParams = false;
