@@ -16,8 +16,8 @@ export const metadata: Metadata ={
   }
 }
 
-export default function Page({ params }: { params: { page?: number }}): ReactElement {
-  const page = (Number)(params.page || 1);
+export default function Page({ params }: { params: { index?: number }}): ReactElement {
+  const page = (Number)(params.index || 1);
   const total = getAllTutorials();
   const entries = total.slice((page - 1) * PageSize, page * PageSize);
   const pages = Math.ceil(total.length / PageSize);
@@ -33,13 +33,13 @@ export default function Page({ params }: { params: { page?: number }}): ReactEle
       </section>
       <section className="pagination">
         {pages > 1 && page > 1 && (
-          <Link href={`/tutorials/${page - 1}`}>&lsaquo;Previous &nbsp;</Link>
+          <Link href={`/all-tutorials/${page - 1}`}>&lsaquo;Previous &nbsp;</Link>
         )}
         {pages > 1 && (
           <p>Page {page} of {pages}</p>
         )}
         {pages > 1 && page < pages && (
-          <Link href={`/tutorials/${page + 1}`}>&nbsp;Next &rsaquo;</Link>
+          <Link href={`/all-tutorials/${page + 1}`}>&nbsp;Next &rsaquo;</Link>
         )}
       </section>
       <hr />
