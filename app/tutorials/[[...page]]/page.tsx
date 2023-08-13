@@ -1,9 +1,9 @@
 import Card from '@/components/Card';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import NewsletterForm from '@/components/NewsletterForm';
 import { getAllTutorials } from '@/lib/functions';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { ReactElement } from 'react';
 
 const PageSize = 8;
@@ -17,7 +17,9 @@ export const metadata: Metadata ={
 }
 
 export default function Page({ params }: { params: { page?: number }}): ReactElement {
-  const entries = getAllTutorials().slice(((params.page || 1) - 1) * PageSize, (params.page || 1) * PageSize);
+  const total = getAllTutorials();
+  const entries = total.slice(((params.page || 1) - 1) * PageSize, (params.page || 1) * PageSize);
+  const pages = Math.ceil(total.length / PageSize);
 
   return (
     <main>
@@ -28,8 +30,15 @@ export default function Page({ params }: { params: { page?: number }}): ReactEle
           <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entry} />
         ))}
       </section>
+      <section className="flex justify-center">
+        {pages > 1 && (params.page || 1) > 1 && (
+          <Link href={`/tutorials/${(params.page || 1) - 1}`}>Previous</Link>
+        )}
+        {pages > 1 && (params.page || 1) < pages && (
+          <Link href={`/tutorials/${(params.page || 1) + 1}`}>Next</Link>
+        )}
+      </section>
       <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>
