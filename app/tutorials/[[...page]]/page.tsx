@@ -33,10 +33,10 @@ export default function Page({ params }: { params: { page?: number }}): ReactEle
       </section>
       <section className="flex justify-center">
         {pages > 1 && page > 1 && (
-          <Link href={`/tutorials/${page - 1}`}>Previous</Link>
+          <Link href={`/tutorials/${page - 1}`}>&lsaquo;Previous &nbsp;</Link>
         )}
         {pages > 1 && page < pages && (
-          <Link href={`/tutorials/${page + 1}`}>Next</Link>
+          <Link href={`/tutorials/${page + 1}`}>&nbsp;Next &rsaquo;</Link>
         )}
       </section>
       <hr />
