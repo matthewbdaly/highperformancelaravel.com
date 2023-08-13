@@ -16,8 +16,12 @@ export const metadata: Metadata ={
   }
 }
 
-export default async function Page({ params }: { params: { index?: number }}): Promise<ReactElement> {
-  const page = (Number)(params.index);
+export default async function Page({ 
+  params,
+}: { 
+  params: { count: string };
+}): Promise<ReactElement> {
+  const page = Number(params.count);
   const total = getAllTutorials();
   const entries = total.slice((page - 1) * PageSize, page * PageSize);
   const pages = Math.ceil(total.length / PageSize);
@@ -48,10 +52,11 @@ export default async function Page({ params }: { params: { index?: number }}): P
   );
 }
 
-export async function generateStaticParams(): Promise<Array<number>> {
-    const tutorials = getAllTutorials();
-    const totalPages = Math.ceil(tutorials.length / PageSize);
-    return Array.from({ length: totalPages }, (_, index) => index + 1);
+export async function generateStaticParams(): Promise<Array<{ count: string }>> {
+  const tutorials = getAllTutorials();
+  const totalPages = Math.ceil(tutorials.length / PageSize);
+  return Array.from({ length: totalPages }, (_, index) => ({ count: (index + 1).toString() }));
 }
+
 
 export const dynamicParams = false;
