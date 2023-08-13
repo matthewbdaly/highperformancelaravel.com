@@ -8,7 +8,6 @@ import { ReactElement } from "react";
 import slugify from "slugify";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
-import NewsletterForm from "@/components/NewsletterForm";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
@@ -62,8 +61,6 @@ export default async function Page({
         </article>
         <Sidebar />
       </section>
-      <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>

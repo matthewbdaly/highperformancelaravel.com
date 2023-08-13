@@ -1,7 +1,6 @@
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import NewsletterForm from "@/components/NewsletterForm";
 import { getAllSeries } from "@/lib/functions";
 import { Metadata } from "next";
 import { ReactElement } from "react";
@@ -27,7 +26,6 @@ export default function Page(): ReactElement {
         ))}
       </section>
       <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>

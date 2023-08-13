@@ -5,7 +5,6 @@ import { Metadata } from "next";
 import fs from "fs";
 import path from 'path';
 import matter from 'gray-matter';
-import NewsletterForm from '@/components/NewsletterForm';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -70,8 +69,6 @@ export default async function Page({
         </article>
         <Sidebar />
       </section>
-      <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>

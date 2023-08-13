@@ -1,7 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import NewsletterForm from "@/components/NewsletterForm";
 import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
 import { ReactElement } from "react";
@@ -26,8 +25,6 @@ export default function Page(): ReactElement {
         </div>
         <Sidebar />
       </section>
-      <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>

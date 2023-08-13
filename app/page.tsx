@@ -1,6 +1,5 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import NewsletterForm from '@/components/NewsletterForm'
 import Sidebar from '@/components/Sidebar'
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
         <Sidebar />
       </section>
       <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>

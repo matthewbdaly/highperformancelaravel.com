@@ -7,7 +7,6 @@ import path from "path";
 import { PostFileProps } from "@/lib/functions";
 import Card from "@/components/Card";
 import { getAllSeries, getAllTutorials } from "@/lib/functions";
-import NewsletterForm from "@/components/NewsletterForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -65,8 +64,6 @@ export default async function Page({
           );
         })}
       </section>
-      <hr />
-      <NewsletterForm />
       <hr />
       <Footer />
     </main>
