@@ -57,6 +57,9 @@ export default function Header(): ReactElement {
           <li>
             <Link href="/contact">Contact</Link>
           </li>
+          <li>
+            <Link href="/rss.xml"><i className="fa-solid fa-rss"></i></Link>
+          </li>
         </ul>
         <Search />
       </nav>
