@@ -16,8 +16,8 @@ export const metadata: Metadata ={
   }
 }
 
-export default function Page({ params }: { params: { page?: number }}): ReactElement {
-  const page = (Number)(params.page || 1);
+export default function Page({ params }: { params: { index: number }}): ReactElement {
+  const page = (Number)(params.index);
   const total = getAllTutorials();
   const entries = total.slice((page - 1) * PageSize, page * PageSize);
   const pages = Math.ceil(total.length / PageSize);
@@ -53,3 +53,5 @@ export async function generateStaticParams() {
     const totalPages = Math.ceil(tutorials.length / PageSize);
     return Array.from({ length: totalPages }, (_, index) => index + 1);
 }
+
+export const dynamicParams = false;

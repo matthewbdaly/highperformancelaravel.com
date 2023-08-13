@@ -80,3 +80,5 @@ export function generateStaticParams(): Array<{slug: string}> {
     slug
   }));
 }
+
+export const dynamicParams = false;
