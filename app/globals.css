@@ -107,6 +107,14 @@
         @apply hidden;
       }
 
+      .pagination {
+        @apply flex flex-row items-center justify-center;
+
+        a {
+          @apply font-bold text-xl hover:text-caribbean-green-600 duration-200 delay-200;
+        }
+      }
+
       section.newsletter {
         @apply w-full lg:w-3/4 p-4 mx-auto text-center bg-gradient-to-br from-caribbean-green-400 to-caribbean-green-600 rounded-lg shadow-lg;
 

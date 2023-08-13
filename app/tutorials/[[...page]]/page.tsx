@@ -31,14 +31,13 @@ export default function Page({ params }: { params: { page?: number }}): ReactEle
           <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entry} />
         ))}
       </section>
-      <section className="flex flex-row items-center justify-center">
+      <section className="pagination">
         {pages > 1 && page > 1 && (
           <Link href={`/tutorials/${page - 1}`}>&lsaquo;Previous &nbsp;</Link>
         )}
         {pages > 1 && (
           <p>Page {page} of {pages}</p>
         )}
-        <p>There are {total.length} tutorials</p>
         {pages > 1 && page < pages && (
           <Link href={`/tutorials/${page + 1}`}>&nbsp;Next &rsaquo;</Link>
         )}
