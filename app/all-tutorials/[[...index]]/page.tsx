@@ -53,3 +53,5 @@ export async function generateStaticParams() {
     const totalPages = Math.ceil(tutorials.length / PageSize);
     return Array.from({ length: totalPages }, (_, index) => index + 1);
 }
+
+export const dynamicParams = false;
