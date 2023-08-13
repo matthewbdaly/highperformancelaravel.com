@@ -17,7 +17,7 @@ export const metadata: Metadata ={
 }
 
 export default function Page({ params }: { params: { index?: number }}): ReactElement {
-  const page = (Number)(params.index || 1);
+  const page = (Number)(params.index);
   const total = getAllTutorials();
   const entries = total.slice((page - 1) * PageSize, page * PageSize);
   const pages = Math.ceil(total.length / PageSize);
