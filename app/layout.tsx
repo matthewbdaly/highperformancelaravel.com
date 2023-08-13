@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `High Performance Laravel`,
     description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
-    locale: `en_GB`,
+    locale: `en`,
     type: 'website'
   },
   themeColor: [
