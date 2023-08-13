@@ -48,7 +48,7 @@ export default function Page({ params }: { params: { index?: number }}): ReactEl
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Array<number> {
     const tutorials = getAllTutorials();
     const totalPages = Math.ceil(tutorials.length / PageSize);
     return Array.from({ length: totalPages }, (_, index) => index + 1);
