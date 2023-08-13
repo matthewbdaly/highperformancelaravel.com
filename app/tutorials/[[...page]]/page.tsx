@@ -17,8 +17,9 @@ export const metadata: Metadata ={
 }
 
 export default function Page({ params }: { params: { page?: number }}): ReactElement {
+  const page = (Number)(params.page || 1);
   const total = getAllTutorials();
-  const entries = total.slice(((params.page || 1) - 1) * PageSize, (params.page || 1) * PageSize);
+  const entries = total.slice((page - 1) * PageSize, page * PageSize);
   const pages = Math.ceil(total.length / PageSize);
 
   return (
@@ -31,14 +32,13 @@ export default function Page({ params }: { params: { page?: number }}): ReactEle
         ))}
       </section>
       <section className="flex justify-center">
-        {pages > 1 && (params.page || 1) > 1 && (
-          <Link href={`/tutorials/${(Number)(params.page || 1) - 1}`}>Previous</Link>
+        {pages > 1 && page > 1 && (
+          <Link href={`/tutorials/${page - 1}`}>Previous</Link>
         )}
-        {pages > 1 && (params.page || 1) < pages && (
-          <Link href={`/tutorials/${(Number)(params.page || 1) + 1}`}>Next</Link>
+        {pages > 1 && page < pages && (
+          <Link href={`/tutorials/${page + 1}`}>Next</Link>
         )}
       </section>
-      <hr />
       <hr />
       <Footer />
     </main>
