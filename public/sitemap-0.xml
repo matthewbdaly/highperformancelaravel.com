@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>http://localhost:3000/atom.xml</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/all-tutorials/1</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/all-tutorials/2</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/feed.json</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/rss.xml</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/contact</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/search.json</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/faster-database-queries</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/front-end</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/myth-busters</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/server-configuration</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/writing-efficient-applications</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/about</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/privacy-policy</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/writing-efficient-applications/caching-responses-with-the-cache-headers-middleware</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/server-configuration/disable-htaccess-for-faster-performance</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/myth-busters/myth-performance-is-a-matter-of-choosing-the-right-framework</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/myth-busters/myth-php-is-slower-than-language-x</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/myth-busters/myth-you-need-to-use-octane-to-get-acceptable-performance-from-laravel</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/front-end/pick-your-javascript-libraries-carefully</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/writing-efficient-applications/reducing-repeated-requests-for-the-user-with-a-decorator</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/writing-efficient-applications/reducing-unnecessary-dependencies-in-controllers</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/tutorials/series/faster-database-queries/replace-datediff-with-curdate-interval</loc><lastmod>2023-08-17T20:04:50.931Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
