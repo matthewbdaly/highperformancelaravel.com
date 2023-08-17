@@ -7,8 +7,6 @@ import path from "path";
 import { ReactElement } from "react";
 import slugify from "slugify";
 import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 
 const getPostBySlug = async (slug: string): Promise<{
@@ -49,21 +47,15 @@ export default async function Page({
 }): Promise<ReactElement> {
   const { content, data } = await getPostBySlug(params.slug);
   return (
-    <main>
-      <Header />
-      <hr />
-      <section className="content-wrapper">
-        <article className="content">
-          {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-600 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
-          <TextSection data={data}>
-            {content}
-          </TextSection>
-        </article>
-        <Sidebar />
-      </section>
-      <hr />
-      <Footer />
-    </main>
+    <section className="content-wrapper">
+      <article className="content">
+        {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-600 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
+        <TextSection data={data}>
+          {content}
+        </TextSection>
+      </article>
+      <Sidebar />
+    </section>
   );
 }
 

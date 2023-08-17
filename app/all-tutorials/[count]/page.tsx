@@ -1,6 +1,4 @@
 import Card from '@/components/Card';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import { getAllTutorials } from '@/lib/functions';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -8,7 +6,7 @@ import { ReactElement } from 'react';
 
 const PageSize = 8;
 
-export const metadata: Metadata ={
+export const metadata: Metadata = {
   metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
   title: `Tutorials | High Performance Laravel`,
   openGraph: {
@@ -27,9 +25,7 @@ export default async function Page({
   const pages = Math.ceil(total.length / PageSize);
 
   return (
-    <main>
-      <Header />
-      <hr />
+    <>
       <section className="w-full flex flex-row flex-wrap pt-8">
         {entries.map(entry => (
           <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entry} />
@@ -46,9 +42,7 @@ export default async function Page({
           <Link href={`/all-tutorials/${page + 1}`}>&nbsp;Next &rsaquo;</Link>
         )}
       </section>
-      <hr />
-      <Footer />
-    </main>
+    </>
   );
 }
 
@@ -57,6 +51,5 @@ export async function generateStaticParams(): Promise<Array<{ count: string }>> 
   const totalPages = Math.ceil(tutorials.length / PageSize);
   return Array.from({ length: totalPages }, (_, index) => ({ count: (index + 1).toString() }));
 }
-
 
 export const dynamicParams = false;

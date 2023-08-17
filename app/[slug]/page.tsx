@@ -5,8 +5,6 @@ import { Metadata } from "next";
 import fs from "fs";
 import path from 'path';
 import matter from 'gray-matter';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 
 export interface PageFileProps {
   title: string;
@@ -58,20 +56,14 @@ export default async function Page({
   const { content, data } = await getPageContent(params.slug);
 
   return (
-    <main>
-      <Header />
-      <hr />
-      <section className="content-wrapper">
-        <article className="content">
-          <TextSection data={data}>
-            {content}
-          </TextSection>
-        </article>
-        <Sidebar />
-      </section>
-      <hr />
-      <Footer />
-    </main>
+    <section className="content-wrapper">
+      <article className="content">
+        <TextSection data={data}>
+          {content}
+        </TextSection>
+      </article>
+      <Sidebar />
+    </section>
   );
 }
 
