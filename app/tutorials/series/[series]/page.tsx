@@ -7,6 +7,7 @@ import path from "path";
 import { PostFileProps } from "@/lib/functions";
 import Card from "@/components/Card";
 import { getAllSeries, getAllTutorials } from "@/lib/functions";
+import Hero from "@/components/Hero";
 
 const getSeriesBySlug = async (slug: string): Promise<{
   data: {
@@ -51,14 +52,17 @@ export default async function Page({
   const { data } = await getSeriesBySlug(params.series);
 
   return (
-    <section className="w-full flex flex-row flex-wrap pt-8">
-      {entries.map(entry => {
-        const { series, ...entryWithoutSeries } = entry;
-        return (
-          <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entryWithoutSeries} />
-        );
-      })}
-    </section>
+    <>
+      <Hero {...data} />
+      <section className="w-full flex flex-row flex-wrap pt-8">
+        {entries.map(entry => {
+          const { series, ...entryWithoutSeries } = entry;
+          return (
+            <Card key={entry.slug} href={`/tutorials/series/${entry.slug}`} {...entryWithoutSeries} />
+          );
+        })}
+      </section>
+    </>
   );
 }
 
