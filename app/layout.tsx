@@ -23,7 +23,7 @@ const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://loc
       type: 'website'
     },
     themeColor: [
-      { media: '(prefers-color-scheme: light)', color: '#E9FFF7' },
+      { media: '(prefers-color-scheme: light)', color: '#e9fff7' },
       { media: '(prefers-color-scheme: dark)', color: '#374151' },
     ],
     alternates: {
