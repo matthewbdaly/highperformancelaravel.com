@@ -14,6 +14,7 @@ export default function Header(): ReactElement {
         <button
           className="block md:hidden"
           onClick={() => setMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
         >
           <svg
             className="w-6 h-6"
