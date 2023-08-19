@@ -1,8 +1,8 @@
 ---
 title: Caching responses with the cache.headers middleware
 description: Out of the box, Laravel supports a simple method of adding
-  appropriate caching headers to HTTP responses. We show you how to use it.
-date: "02-11-2022 10:41:01"
+  appropriate caching headers to HTTP responses to prevent unnecessary HTTP requests.
+date: "19-08-2023 10:41:01"
 series: Writing efficient applications
 featured_image: img/tengyart-al1bUu7EfAQ-unsplash.jpg
 featured_image_username: Tengyart

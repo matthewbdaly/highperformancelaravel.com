@@ -5,7 +5,7 @@ featured_image_username: Ilya Pavlov
 description: If you're logged into your application, it may be making
   unnecessary repeated requests to fetch the user. Learn how to cache the user
   to eliminate this.
-date: "2022-10-19T12:21:04.837Z"
+date: "19-08-2023 10:41:01"
 series: Writing efficient applications
 ---
 
