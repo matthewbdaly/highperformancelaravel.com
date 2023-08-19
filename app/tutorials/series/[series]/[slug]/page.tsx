@@ -49,9 +49,9 @@ export default async function Page({
   const { content, data } = await getPostBySlug(params.slug);
   return (
     <section className="content-wrapper">
+      <Hero {...data} />
       <article className="content">
-        <Hero {...data} />
-        {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-700 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
+        {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-700 dark:text-caribbean-green-200 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
         <TextSection data={data}>
           {content}
         </TextSection>

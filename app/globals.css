@@ -147,7 +147,7 @@
           }
 
           .socialIcons {
-            @apply flex justify-between mx-auto w-4/5;
+            @apply flex justify-between mx-auto w-4/5 my-4;
 
             i {
               animation: animate 3s linear infinite;
@@ -185,7 +185,7 @@
     }
 
     .heroWrapper {
-      @apply relative w-full;
+      @apply relative w-full mt-4;
       min-height: 50vh;
     }
 
