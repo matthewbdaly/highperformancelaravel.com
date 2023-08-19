@@ -181,7 +181,7 @@
     }
 
     footer {
-      @apply text-center bg-gray-800 text-gray-50 w-full p-8;
+      @apply text-center bg-gray-800 text-gray-50 w-full p-8 mt-8;
     }
 
     .heroWrapper {
