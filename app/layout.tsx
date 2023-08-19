@@ -23,13 +23,13 @@ const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://loc
       type: 'website'
     },
     themeColor: [
-      { media: '(prefers-color-scheme: light)', color: '#bfdbfe' },
-      { media: '(prefers-color-scheme: dark)', color: '#172554' },
+      { media: '(prefers-color-scheme: light)', color: '#E9FFF7' },
+      { media: '(prefers-color-scheme: dark)', color: '#374151' },
     ],
     alternates: {
       canonical: baseUrl,
       languages: {
-        'en-GB': baseUrl
+        'en': baseUrl
       },
       types: {
         'application/rss+xml': `${baseUrl}rss.xml`,
