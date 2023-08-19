@@ -4,8 +4,7 @@ export default function Home() {
   return (
     <section className="content-wrapper">
       <div className="content">
-        <h2>Welcome to High Performance Laravel!</h2>
-        <h3>Supercharge your Laravel applications with expert performance optimization tips and strategies.</h3>
+        <h2>Learn how to <em>really</em> optimize your Laravel applications</h2>
         <blockquote>
           <h4>Is your Laravel application running slower than you&apos;d like?</h4>
           <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
