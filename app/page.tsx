@@ -1,10 +1,9 @@
-import Sidebar from '@/components/Sidebar'
-
 export default function Home() {
   return (
     <section className="content-wrapper">
       <div className="content">
-        <h2>Learn how to <em>really</em> optimize your Laravel applications</h2>
+        <h2>Cut through the disinformation, and learn <em>real</em> techniques to optimize your Laravel applications</h2>
+        <p>Struggling to get the most out of your Laravel applications?</p>
         <blockquote>
           <h4>Is your Laravel application running slower than you&apos;d like?</h4>
           <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
@@ -19,7 +18,6 @@ export default function Home() {
         <p>Take the first step towards optimizing your Laravel application today. Explore my blog and discover practical tips, expert insights, and actionable advice to unlock the true potential of your Laravel code. With High Performance Laravel as your guide, you&apos;ll be well-equipped to build lightning-fast Laravel applications that will impress your users and give your clients&apos; websites a competitive edge.</p>
         <h3>Optimize your Laravel applications&apos; performance today. Explore High Performance Laravel now.</h3>
       </div>
-      <Sidebar />
     </section>
   )
 }
