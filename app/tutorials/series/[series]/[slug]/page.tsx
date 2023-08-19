@@ -8,6 +8,7 @@ import { ReactElement } from "react";
 import slugify from "slugify";
 import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
+import Hero from "@/components/Hero";
 
 const getPostBySlug = async (slug: string): Promise<{
   data: PostFileProps,
@@ -49,6 +50,7 @@ export default async function Page({
   return (
     <section className="content-wrapper">
       <article className="content">
+        <Hero {...data} />
         {data.series && <h3 className="text-2xl pb-4">From the series <span className="text-caribbean-green-700 font-bold"><Link href={`/tutorials/series/${slugify(data.series.toLowerCase())}`}>{data.series}</Link></span></h3>}
         <TextSection data={data}>
           {content}
