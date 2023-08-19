@@ -53,8 +53,8 @@ export default function RootLayout({
           <hr />
           {children}
           <hr />
-          <Footer />
         </main>
+        <Footer />
       </body>
     </html>
   )

@@ -178,10 +178,11 @@
           @apply font-bold text-xl hover:text-caribbean-green-700 duration-200 delay-200;
         }
       }
-
-      footer {
-        @apply text-center;
-      }
     }
+
+    footer {
+      @apply text-center bg-gray-800 text-gray-50 w-full p-8;
+    }
+
   }
 }
