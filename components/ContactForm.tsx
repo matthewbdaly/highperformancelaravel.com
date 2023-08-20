@@ -44,7 +44,7 @@ export default function ContactForm(): ReactElement {
       </div>
       <div data-netlify-recaptcha="true"></div>
       <p>
-        <button type="submit" className="bg-gradient-to-r from-caribbean-green-400 to-caribbean-green-600 text-white rounded-lg shadow-lg p-2 px-4 w-full md:w-1/2"  disabled={submitted}>Send</button>
+        <button type="submit" className="bg-gradient-to-r from-purple-400 to-purple-600 text-white rounded-lg shadow-lg p-2 px-4 w-full md:w-1/2"  disabled={submitted}>Send</button>
       </p>
       {error && <p>{error}</p>}
     </form>

@@ -59,7 +59,7 @@
         @apply py-2;
 
         em {
-          @apply text-caribbean-green-700 dark:text-caribbean-green-200 not-italic;
+          @apply text-purple-700 dark:text-purple-200 not-italic;
         }
       }
 
@@ -109,7 +109,7 @@
               @apply border-b-2 py-2 md:border-b-0 md:py-0 text-center md:text-left block md:inline w-full md:w-auto;
 
               a {
-                @apply hover:text-caribbean-green-700 dark:hover:text-caribbean-green-200 pb-2 md:hover:border-b-4 hover:border-caribbean-green-700 dark:hover:border-caribbean-green-200 duration-200 delay-200 block md:inline w-full md:w-auto;
+                @apply hover:text-purple-700 dark:hover:text-purple-200 pb-2 md:hover:border-b-4 hover:border-purple-700 dark:hover:border-purple-200 duration-200 delay-200 block md:inline w-full md:w-auto;
               }
             }
           }
@@ -131,7 +131,7 @@
           @apply flex-grow w-full lg:w-2/3;
 
           blockquote {
-            @apply w-full bg-caribbean-green-50 border-caribbean-green-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-600 rounded-r-lg;
+            @apply w-full bg-purple-50 border-purple-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-600 rounded-r-lg;
           }
         }
 
@@ -175,13 +175,13 @@
         @apply flex flex-row items-center justify-center;
 
         a {
-          @apply font-bold text-xl hover:text-caribbean-green-700 dark:hover:text-caribbean-green-200 duration-200 delay-200;
+          @apply font-bold text-xl hover:text-purple-700 dark:hover:text-purple-200 duration-200 delay-200;
         }
       }
     }
 
     footer {
-      @apply text-center bg-gray-800 text-gray-50 w-full p-8 mt-8;
+      @apply text-center bg-purple-950 text-gray-50 w-full p-8 mt-8;
     }
 
     .heroWrapper {
