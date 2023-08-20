@@ -37,11 +37,11 @@ We use Google Analytics to collect and analyze information about your usage of o
 
 ## Monetization and Advertisement
 
-In the future, we may implement advertisements or offer premium content on our Website. This may involve the collection of additional information to provide personalized content and ads. Any data collected for these purposes will be used in accordance with this Privacy Policy.
+Please be aware that while we do not currently collect data for these purposes, in the future, we may implement advertisements or offer premium content on our Website. Any data collected for these purposes will be used in accordance with this Privacy Policy.
 
 ## User Registration and Data Collection
 
-In the future, we may implement functionality to capture your name and email address if you choose to register on our Website. This information will not be required for the core site functionality, and users would need to explicitly register (possibly through third-party authentication) in order to provide these details.
+Please note that while we do not currently collect this data, we may introduce functionality for user registration in the future. This information will not be required for the core site functionality, and users would need to explicitly register (possibly through third-party authentication) in order to provide these details.
 
 ## Security
 
@@ -53,4 +53,4 @@ We reserve the right to update or modify this Privacy Policy at any time. We wil
 
 ## Contact Us
 
-If you have any questions or concerns about this Privacy Policy, please contact us at [matthew@matthedaly.co.uk](mailto:matthew@matthedaly.co.uk).
+If you have any questions or concerns about this Privacy Policy, please contact us at matthew(at)matthedaly.co.uk.
