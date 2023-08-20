@@ -5,7 +5,7 @@ export default function Home() {
         <h2>Cut through the disinformation, and learn <em>real</em> techniques to optimize your Laravel applications</h2>
         <p>Struggling to get the most out of your Laravel applications?</p>
         <blockquote>
-          <h4>Is your Laravel application running slower than you&apos;d like?</h4>
+          <h3>Is your Laravel application running slower than you&apos;d like?</h3>
           <p>I understand how frustrating it can be to deal with a sluggish Laravel application. That&apos;s why I&apos;ve created High Performance Laravel – a resource dedicated to providing you with practical, informative, and approachable tips that will help you optimize your Laravel applications for maximum performance.</p>
           <h4>Unlock the full potential of your Laravel code.</h4>
           <p>As a fellow developer, I know the pain points and common issues that can slow down your Laravel application. Through High Performance Laravel, I offer clear solutions and actionable advice to help you optimize your code, boost performance, and leave your competition behind.</p>
