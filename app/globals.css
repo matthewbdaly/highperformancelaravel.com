@@ -83,6 +83,10 @@
     header {
       @apply bg-purple-950 text-gray-50 w-full pb-8 mb-8;
 
+      h1 {
+        @apply font-serif;
+      }
+
       em {
         @apply text-purple-200 not-italic;
       }
