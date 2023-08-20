@@ -58,8 +58,8 @@ export default function RootLayout({
           `}
       </Script>
       <body>
+        <Header />
         <main>
-          <Header />
           <hr />
           {children}
           <hr />

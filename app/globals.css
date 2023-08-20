@@ -52,53 +52,38 @@
   body {
     @apply font-sans bg-gray-50 text-gray-600 dark:text-gray-200 dark:bg-gray-700;
 
-    main {
-      @apply w-full md:w-4/5 mx-auto px-4;
+    h1 {
+      @apply text-4xl font-extrabold leading-8;
+    }
 
-      h1, h2, h3, h4 {
-        @apply py-2;
+    h2 {
+      @apply text-3xl font-bold leading-8;
+    }
 
-        em {
-          @apply text-purple-700 dark:text-purple-200 not-italic;
-        }
+    h3 {
+      @apply text-2xl font-bold leading-6;
+    }
+
+    h4 {
+      @apply text-xl font-bold leading-6;
+    }
+
+    p {
+      @apply leading-6 py-2;
+    }
+
+    h1, h2, h3, h4 {
+      @apply py-2;
+
+      em {
+        @apply text-purple-700 dark:text-purple-200 not-italic;
       }
+    }
 
-      h1 {
-        @apply text-4xl font-extrabold leading-8;
-      }
+    header {
+      div {
+        @apply w-4/5 mx-auto flex items-center justify-between;
 
-      h2 {
-        @apply text-3xl font-bold leading-8;
-      }
-
-      h3 {
-        @apply text-2xl font-bold leading-6;
-      }
-
-      h4 {
-        @apply text-xl font-bold leading-6;
-      }
-
-      p {
-        @apply leading-6 py-2;
-      }
-
-      code {
-        @apply text-red-600 dark:text-red-200;
-      }
-
-      p > code, li > code {
-        @apply whitespace-pre-wrap break-words;
-      }
-
-      pre code {
-        @apply bg-black text-white rounded block float-left px-8 w-full relative shadow-lg;
-        -webkit-overflow-scrolling: touch;
-        overflow: initial;
-        overflow-x: auto;
-      }
-
-      header {
         nav {
           @apply flex items-center justify-between;
 
@@ -122,6 +107,25 @@
             }
           }
         }
+      }
+    }
+
+    main {
+      @apply w-full md:w-4/5 mx-auto;
+
+      code {
+        @apply text-red-600 dark:text-red-200;
+      }
+
+      p > code, li > code {
+        @apply whitespace-pre-wrap break-words;
+      }
+
+      pre code {
+        @apply bg-black text-white rounded block float-left px-8 w-full relative shadow-lg;
+        -webkit-overflow-scrolling: touch;
+        overflow: initial;
+        overflow-x: auto;
       }
 
       .content-wrapper {
