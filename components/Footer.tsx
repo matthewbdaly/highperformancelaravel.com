@@ -20,7 +20,7 @@ export default function Footer(): ReactElement {
           </div>
         </div>
       </section>
-      <div>
+      <div className="copyright">
         <p>Copyright &copy; Matthew Daly {new Date().getFullYear()}</p>
       </div>
     </footer>

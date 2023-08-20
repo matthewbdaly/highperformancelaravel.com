@@ -185,10 +185,14 @@
     }
 
     footer {
-      @apply text-center bg-purple-950 text-gray-50 w-full py-8 mt-8;
+      @apply bg-purple-950 text-gray-50 w-full py-8 mt-8;
+
+      .copyright {
+        @apply text-center;
+      }
 
       section {
-        @apply w-full md:w-4/5 mx-auto flex items-center justify-between;
+        @apply w-full md:w-4/5 mx-auto flex items-center justify-between px-4;
 
         div {
           @apply w-full md:w-1/3;
