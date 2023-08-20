@@ -5,7 +5,7 @@ featured_image_username: Carlos Muza
 description: Performance benchmarks may seem a useful guide when picking a
   framework to develop your application in, but they need to be taken with a
   pinch of salt.
-date: "19-08-2023 10:41:01"
+date: "2023-08-20T14:21:04.837Z"
 series: Myth Busters
 ---
 

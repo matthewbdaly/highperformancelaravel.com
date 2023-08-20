@@ -2,7 +2,7 @@
 title: Pick your Javascript libraries carefully
 description: You can't just assume you need jQuery all the time, and if you
   don't, you can save a lot of bandwidth.
-date: "19-08-2023 10:41:01"
+date: "2023-08-20T14:21:04.837Z"
 series: Front end
 featured_image: "img/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg"
 featured_image_username: 'Greg Rakozy'

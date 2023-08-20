@@ -3,7 +3,7 @@ title: Disable htaccess for faster performance
 featured_image: img/charlesdeluvio-lks7vei-eag-unsplash.jpg
 featured_image_username: charlesdeluvio
 description: If you're using Apache as your web server, the htaccess file can be a significant performance bottleneck, and often an unnecessary one.
-date: "19-08-2023 10:41:01"
+date: "2023-08-20T14:21:04.837Z"
 series: Server configuration
 ---
 

@@ -3,7 +3,7 @@ title: Replace DATEDIFF with CURDATE - INTERVAL
 description: The DATEDIFF function in SQL can be slow. Replacing it with CURDATE can often help performance on complex queries.
 featured_image: img/michael-dziedzic-D6FMtY6XCyM-unsplash.jpg
 featured_image_username: Michael Dziedzic
-date: "19-08-2023 10:41:01"
+date: "2023-08-20T14:21:04.837Z"
 series: Faster database queries
 ---
 
