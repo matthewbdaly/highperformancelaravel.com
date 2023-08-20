@@ -110,10 +110,10 @@
           }
 
           form ul {
-            @apply space-x-0 z-10 absolute bg-gray-50 shadow-lg grid grid-cols-1 mr-4 md:mr-0;
+            @apply space-x-0 z-10 absolute bg-transparent shadow-lg grid grid-cols-1 mr-4 md:mr-0;
 
             li {
-              @apply border-2 border-gray-300 p-2 block dark:text-gray-600;
+              @apply border-2 border-gray-300 p-2 block text-gray-600 bg-gray-50 w-full;
             }
           }
         }
