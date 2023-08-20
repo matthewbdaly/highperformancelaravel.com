@@ -183,7 +183,7 @@
         @apply flex flex-row items-center justify-center;
 
         a {
-          @apply font-bold text-xl hover:text-purple-700 dark:hover:text-purple-200 duration-200 delay-200;
+          @apply font-bold text-xl hover:text-purple-700 duration-200 delay-200;
         }
       }
     }
@@ -217,12 +217,8 @@
     }
 
     .heroWrapper {
-      @apply relative w-full mt-4;
+      @apply relative w-full mt-4 overflow-hidden ;
       min-height: 50vh;
-    }
-
-    .imageWrapper {
-      @apply -z-10;
     }
 
     .heroContent {

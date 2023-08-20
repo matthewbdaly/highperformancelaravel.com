@@ -12,17 +12,15 @@ const Hero: FC<Props> = ({ featured_image, featured_image_username, title, descr
   return (
     <div className="heroWrapper">
       {featured_image &&
-      <div className="imageWrapper">
-        <Image
-          src={`/${featured_image}`}
-          alt={`Photo by ${featured_image_username} on Unsplash`}
-          title={`Photo by ${featured_image_username} on Unsplash`}
-          fill={true}
-          priority={true}
-          className="object-cover object-center"
-          quality={30}
-        />
-      </div>
+      <Image
+        src={`/${featured_image}`}
+        alt={`Photo by ${featured_image_username} on Unsplash`}
+        title={`Photo by ${featured_image_username} on Unsplash`}
+        fill={true}
+        priority={true}
+        className="object-cover object-center blur-sm"
+        quality={5}
+      />
       }
       <div className="heroContent">
         <h2 className="text-2xl font-bold py-2 px-16 my-2">{title}</h2>
