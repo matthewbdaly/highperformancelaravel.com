@@ -191,10 +191,10 @@
         @apply w-full md:w-4/5 mx-auto flex items-center justify-between;
 
         .socialIcons {
-          @apply flex justify-between mx-auto w-4/5 my-4 text-purple-200;
+          @apply flex justify-between mx-auto w-4/5 my-4;
 
           i {
-            @apply my-2 h-8 w-8 text-3xl;
+            @apply my-2 h-8 w-8 text-3xl text-purple-200 hover:text-purple-100 duration-200 delay-200;
           }
         }
       }
