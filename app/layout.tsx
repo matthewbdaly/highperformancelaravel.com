@@ -47,6 +47,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'GA_MEASUREMENT_ID');
+          `}
+      </Script>
       <body>
         <main>
           <Header />
