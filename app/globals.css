@@ -185,13 +185,17 @@
     }
 
     footer {
-      @apply text-center bg-purple-950 text-gray-50 w-full p-8 mt-8;
+      @apply text-center bg-purple-950 text-gray-50 w-full py-8 mt-8;
 
-      .socialIcons {
-        @apply flex justify-between mx-auto w-4/5 my-4 text-purple-200;
+      section {
+        @apply w-full md:w-4/5 mx-auto flex items-center justify-between;
 
-        i {
-          @apply my-2 h-8 w-8 text-3xl;
+        .socialIcons {
+          @apply flex justify-between mx-auto w-4/5 my-4 text-purple-200;
+
+          i {
+            @apply my-2 h-8 w-8 text-3xl;
+          }
         }
       }
     }
