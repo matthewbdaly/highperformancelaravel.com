@@ -53,4 +53,4 @@ We reserve the right to update or modify this Privacy Policy at any time. We wil
 
 ## Contact Us
 
-If you have any questions or concerns about this Privacy Policy, please contact us at matthew(at)matthedaly.co.uk.
+If you have any questions or concerns about this Privacy Policy, please contact us at matthew(at)matthewdaly.co.uk.
