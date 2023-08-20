@@ -30,7 +30,7 @@ const Card: FC<Props> = ({ title, description, href, slug, series, featured_imag
               sizes="400px"
             />
           </div>
-          <div className="p-2 h-96">
+          <div className="p-2 h-80 md:h-96">
             <h2 className="text-xl font-bold mb-2 py-4">{title}</h2>
             {series && <h3 className="text-lg font-bold">From the series <span className="text-sky-700">{series}</span></h3>}
             <p className="text-lg">{description}</p>
