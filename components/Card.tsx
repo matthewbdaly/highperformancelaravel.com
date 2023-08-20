@@ -17,7 +17,7 @@ const Card: FC<Props> = ({ title, description, href, slug, series, featured_imag
   return (
     <div className="w-full shrink-0 xl:w-1/4 lg:w-1/3 md:w-1/2 md:pr-4 mb-4">
       <Link key={slug} href={href as Route}>
-        <section className="w-full rounded-lg shadow-lg border-2 overflow-hidden mb-2 bg-gradient-to-b from-slate-50 to-slate-100 dark:text-gray-600 hover:-translate-y-1 transition-transform duration-200 delay-200">
+        <section className="w-full rounded-lg shadow-lg border-2 overflow-hidden mb-2 bg-gradient-to-b from-slate-50 to-slate-100 dark:text-gray-600 hover:-translate-y-1 motion-reduce:hover:transform-none transition-transform duration-200 delay-200">
           <div className="w-full h-72 overflow-hidden relative">
             <Image 
               src={`/${featured_image}`} 
