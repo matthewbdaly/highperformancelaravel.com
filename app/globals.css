@@ -76,7 +76,7 @@
       @apply py-2;
 
       em {
-        @apply text-purple-800 dark:text-purple-200 not-italic;
+        @apply text-purple-800 not-italic;
       }
     }
 
