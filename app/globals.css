@@ -81,10 +81,10 @@
     }
 
     header {
-      @apply bg-purple-950 text-gray-50 w-full pb-8 mb-8 px-4 md:px-0;
+      @apply bg-purple-950 text-gray-50 w-full pb-8 pt-8 mb-8 px-4 md:px-0;
 
       h1 {
-        @apply font-serif;
+        @apply font-serif drop-shadow-sm;
       }
 
       em {
