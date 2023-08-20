@@ -160,16 +160,6 @@
             }
           }
 
-          .socialIcons {
-            @apply flex justify-between mx-auto w-4/5 my-4;
-
-            i {
-              animation: animate 3s linear infinite;
-              text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
-              @apply my-2 h-8 w-8 text-3xl;
-            }
-          }
-
           @keyframes animate {
             from {
               filter: hue-rotate(0deg);
@@ -197,8 +187,18 @@
     footer {
       @apply text-center bg-purple-950 text-gray-50 w-full p-8 mt-8;
 
+      .socialIcons {
+        @apply flex justify-between mx-auto w-4/5 my-4;
+
+        i {
+          animation: animate 3s linear infinite;
+          text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+          @apply my-2 h-8 w-8 text-3xl;
+        }
+      }
+
       a {
-        @apply hover:text-purple-200 pb-2 md:hover:border-b-4 hover:border-purple-200 duration-200 delay-200 block md:inline w-full md:w-auto;
+        /* @apply hover:text-purple-200 pb-2 md:hover:border-b-4 hover:border-purple-200 duration-200 delay-200 block md:inline w-full md:w-auto; */
       }
     }
 
