@@ -20,8 +20,6 @@ We may collect non-personal information from you when you use our Website. Non-p
 We may use non-personal information for various purposes, including:
 - To provide and maintain our Website.
 - To analyze and improve our Website's performance and user experience.
-- To send you updates, newsletters, and other communications related to our Website.
-- To respond to your comments, questions, or requests.
 
 ## Disclosure of Your Information
 
@@ -37,11 +35,11 @@ We use Google Analytics to collect and analyze information about your usage of o
 
 ## Monetization and Advertisement
 
-Please be aware that while we do not currently collect data for these purposes, in the future, we may implement advertisements or offer premium content on our Website. Any data collected for these purposes will be used in accordance with this Privacy Policy.
+Please be aware that while we do not currently collect data for these purposes, in the future, we may implement advertisements or offer premium content on our Website, which may require the collection of additional information. Any data collected for these purposes will be used in accordance with this Privacy Policy.
 
 ## User Registration and Data Collection
 
-Please note that while we do not currently collect this data, we may introduce functionality for user registration in the future. This information will not be required for the core site functionality, and users would need to explicitly register (possibly through third-party authentication) in order to provide these details.
+Please note that while we do not currently collect this data, we may introduce functionality for user registration in the future. This information will not be required for the core site functionality, and users would need to explicitly register in order to provide these details.
 
 ## Security
 
