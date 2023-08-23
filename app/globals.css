@@ -196,7 +196,7 @@
       }
 
       section {
-        @apply w-full md:w-4/5 mx-auto flex items-center justify-between px-4;
+        @apply w-full md:w-4/5 mx-auto flex items-center justify-between px-4 md:px-0;
 
         p a {
           @apply pb-2 transition hover:text-purple-200 hover:border-b-2 hover:border-purple-200 duration-200 delay-200 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:delay-0;
