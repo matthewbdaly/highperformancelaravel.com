@@ -113,7 +113,7 @@
     }
 
     main {
-      @apply w-full px-4 md:px-0 md:w-4/5 mx-auto min-h-screen;
+      @apply w-full px-4 md:px-0 md:w-4/5 mx-auto min-h-screen selection:bg-purple-700 selection:text-gray-50;
 
       code {
         @apply text-red-600 dark:text-red-700;
@@ -124,7 +124,7 @@
       }
 
       pre code {
-        @apply bg-black text-white rounded block float-left px-8 w-full relative shadow-lg;
+        @apply bg-black text-white rounded block float-left px-8 w-full relative shadow-lg select-all;
         -webkit-overflow-scrolling: touch;
         overflow: initial;
         overflow-x: auto;
