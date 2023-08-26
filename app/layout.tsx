@@ -47,8 +47,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-94BFP0QTN0" />
-      <Script id="google-analytics">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-94BFP0QTN0" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
