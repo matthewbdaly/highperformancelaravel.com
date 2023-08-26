@@ -5,7 +5,7 @@ featured_image_username: Brenton Pearce
 description: Laravel Octane is a useful way of improving application
   performance. However, it can't help with everything and you shouldn't use it
   as a crutch.
-date: "2023-08-20T14:21:04.837Z"
+date: "2023-08-26T14:21:04.837Z"
 series: Myth Busters
 ---
 

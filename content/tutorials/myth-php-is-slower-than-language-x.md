@@ -5,7 +5,7 @@ featured_image_username: Diego PH
 description: There are languages where the runtime is faster than PHP. However,
   that's often irrelevant since the language runtime isn't usually a significant
   bottleneck.
-date: "2023-08-20T14:21:04.837Z"
+date: "2023-08-26T14:21:04.837Z"
 series: Myth Busters
 ---
 
