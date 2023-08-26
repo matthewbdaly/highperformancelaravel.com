@@ -1,10 +1,10 @@
 backend:
   name: github
   branch: main
-  repo: matthewbdaly/next-site-rewrite
+  repo: matthewbdaly/highperformancelaravel.com
 publish_mode: editorial_workflow
 show_preview_links: false
-display_url: https://creative-froyo-b002f8.netlify.app/
+display_url: https://highperformancelaravel.com/
 locale: 'en'
 media_folder: "public/img"
 public_folder: "img"
