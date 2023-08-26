@@ -68,6 +68,14 @@
       @apply text-xl font-bold leading-6;
     }
 
+    h5 {
+      @apply text-lg font-bold leading-6;
+
+      em {
+        @apply text-purple-800 not-italic;
+      }
+    }
+
     p {
       @apply leading-6 py-2;
     }
