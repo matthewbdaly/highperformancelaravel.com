@@ -209,7 +209,7 @@
             @apply flex justify-between mx-auto w-full my-4;
 
             i {
-              @apply my-2 h-16 w-16 text-xl md:text-3xl text-purple-100 transition hover:text-purple-200 duration-200 delay-200 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:delay-0;
+              @apply my-2 text-2xl md:text-3xl text-purple-100 transition hover:text-purple-200 duration-200 delay-200 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:delay-0;
             }
           }
         }
