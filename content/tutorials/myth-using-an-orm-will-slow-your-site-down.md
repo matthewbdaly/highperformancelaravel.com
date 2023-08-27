@@ -3,7 +3,7 @@ title: "Myth: Using an ORM will slow your site down"
 featured_image: img/uriel-sc-11KDtiUWRq4-unsplash.jpg
 featured_image_username: Uriel SC
 description: You'll often hear claims that using an ORM makes for slower database queries. This is misleading, and a more nuanced understanding will help you to understand how to best optimise your queries.
-date: "2023-08-27T17:21:04.837Z"
+date: "2023-08-27T18:00:00.837Z"
 series: Myth Busters
 ---
 
