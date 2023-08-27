@@ -9,8 +9,6 @@ export default function Footer(): ReactElement {
           <p><Link href="/privacy-policy">Privacy policy</Link></p>
         </div>
         <div>
-        </div>
-        <div>
           <div className="socialIcons">
             <a href="https://matthewdaly.co.uk" target="_blank" rel="noopener noreferrer" title="Homepage"><i className="icon-house"></i></a>
             <a href="https://github.com/matthewbdaly" target="_blank" rel="noopener noreferrer" title="Github"><i className="icon-github"></i></a>
