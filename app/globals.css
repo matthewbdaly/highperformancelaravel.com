@@ -147,6 +147,14 @@
           blockquote {
             @apply w-full bg-purple-50 border-purple-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-700 rounded-r-lg;
           }
+
+          .fallback-links {
+            @apply list-disc pl-4;
+
+            li a {
+              @apply underline transition hover:text-purple-700 duration-200 delay-200 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:delay-0;
+            }
+          }
         }
 
         aside {
