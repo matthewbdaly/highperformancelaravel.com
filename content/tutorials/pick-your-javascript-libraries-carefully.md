@@ -6,6 +6,7 @@ date: "2023-08-26T14:21:04.837Z"
 series: Front end
 featured_image: "img/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg"
 featured_image_username: 'Greg Rakozy'
+featured_image_id: vw3Ahg4x1tY
 ---
 
 Javascript assets are an often-overlooked source of slow websites. Because these days our connections are generally faster, our web browsers are noticeable more efficient at executing Javascript, and we expect more from our websites, we're often more tolerant of large blobs of Javascript code than we should be. But we should bear in mind that that's not always the case for our users - some may be on their phones, possibly using shaky mobile connections while travelling, while others may be using shared connections in libraries, or from a rural village with a very poor broadband connection. As such, we need to think hard before we start pulling in additional Javascript libraries, particularly if they might not be absolutely necessary.

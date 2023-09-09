@@ -5,6 +5,7 @@ featured_image_username: charlesdeluvio
 description: If you're using Apache as your web server, the htaccess file can be a significant performance bottleneck, and often an unnecessary one.
 date: "2023-08-26T14:21:04.837Z"
 series: Server configuration
+featured_image_id: lks7vei-eag
 ---
 
 If you have a Laravel application in production that either has an `.htaccess` file in the `public/` folder, or is even just running with `.htaccess` enabled, your site is not only performing suboptimally, but is likely to be more vulnerable to security issues than it would be otherwise. You should seriously consider disabling it, particularly if your site is experiencing any kind of issues with performance, and move any configuration into your Apache virtualhost configuration file.

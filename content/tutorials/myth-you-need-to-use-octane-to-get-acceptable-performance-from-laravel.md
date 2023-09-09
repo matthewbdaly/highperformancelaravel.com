@@ -7,6 +7,7 @@ description: Laravel Octane is a useful way of improving application
   as a crutch.
 date: "2023-08-26T14:21:04.837Z"
 series: Myth Busters
+featured_image_id: 0iCCK42toA4
 ---
 
 [Laravel Octane](https://laravel.com/docs/9.x/octane) can be useful for improving your Laravel application's performance. However, it's not a magic wand and won't resolve existing performance issues with your application. In many cases, migrating to Octane may not be effective at improving application performance, or may come with too many complications, and you may be better off looking at alternative solutions.

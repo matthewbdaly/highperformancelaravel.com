@@ -5,6 +5,7 @@ featured_image: img/michael-dziedzic-D6FMtY6XCyM-unsplash.jpg
 featured_image_username: Michael Dziedzic
 date: "2023-08-26T14:21:04.837Z"
 series: Faster database queries
+featured_image_id: D6FMtY6XCyM
 ---
 
 Suppose you have to get all the items in a database table where the `created_at` date is within the last `$days` days. You might write the following query using Eloquent:

@@ -6,6 +6,7 @@ description: Any dependencies in a controller can potentially slow down the
   response time. By managing them effectively, you can reduce their impact.
 date: "2023-08-26T14:21:04.837Z"
 series: Writing efficient applications
+featured_image_id: tZc3vjPCk-Q
 ---
 
 Suppose you have a Laravel controller that looks something like this:

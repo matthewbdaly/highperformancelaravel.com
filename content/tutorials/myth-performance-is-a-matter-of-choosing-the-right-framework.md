@@ -7,6 +7,7 @@ description: Performance benchmarks may seem a useful guide when picking a
   pinch of salt.
 date: "2023-08-26T14:21:04.837Z"
 series: Myth Busters
+featured_image_id: hpjsku2uysu
 ---
 
 Oh dear, this is a biggie. Go through the PHP or Laravel subreddits on any given day and it's only a matter of time before you come across one claiming you shouldn't use Laravel because it's too slow. Often it'll cite a set of benchmarks that show Laravel as being the slowest.

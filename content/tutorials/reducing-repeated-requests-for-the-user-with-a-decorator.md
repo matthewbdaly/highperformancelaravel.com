@@ -7,6 +7,7 @@ description: If you're logged into your application, it may be making
   to eliminate this.
 date: "2023-08-26T14:21:04.837Z"
 series: Writing efficient applications
+featured_image_id: oqtafyt5ktw
 ---
 
 If your Laravel application requires login, then the auth middleware will typically be making a hidden query to get the user object for every request, which can slip under the radar unless you use a profiler to check what queries are running. This *can* be excessive, since the user object doesn't actually change that often, and if you're also frequently loading some related data, it may result in additional queries that need not happen on every request. If that's the case, it can be worth caching the user, and optionally any related data that also doesn't change often.

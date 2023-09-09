@@ -5,6 +5,7 @@ featured_image_username: Uriel SC
 description: You'll often hear claims that using an ORM makes for slower database queries. This is misleading, and a more nuanced understanding will help you to understand how to best optimise your queries.
 date: "2023-08-27T18:00:00.837Z"
 series: Myth Busters
+featured_image_id: 11KDtiUWRq4
 ---
 
 Another myth you'll often hear being parroted is that using an ORM like Eloquent will inevitably slow down your queries. This is simply not true, and is caused almost entirely by naive usage.

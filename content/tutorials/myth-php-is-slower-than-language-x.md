@@ -7,6 +7,7 @@ description: There are languages where the runtime is faster than PHP. However,
   bottleneck.
 date: "2023-08-26T14:21:04.837Z"
 series: Myth Busters
+featured_image_id: fiq0tet6llw
 ---
 
 You'll often hear criticism of PHP as being slower than Node.js, Golang, or various other programming languages. However, these criticisms are nearly always neither here not there.
