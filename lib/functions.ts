@@ -9,8 +9,7 @@ export interface PostFileProps {
   description: string;
   date: string;
   series: string;
-  featured_image?: string;
-  featured_image_username?: string;
+  featured_image_id?: string;
   slug: string;
 };
 

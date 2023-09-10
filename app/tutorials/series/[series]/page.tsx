@@ -11,8 +11,6 @@ import Hero from "@/components/Hero";
 
 const getSeriesBySlug = async (slug: string): Promise<{
   data: {
-    featured_image?: string,
-    featured_image_username?: string;
     title: string;
     description: string;
   },

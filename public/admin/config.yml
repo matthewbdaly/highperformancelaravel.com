@@ -34,8 +34,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Featured image", name: "featured_image", widget: "image"}
-      - {label: "Featured image username", name: "featured_image_username", widget: "string"}
+      - {label: "Featured image ID", name: "featured_image_id", widget: "string"}
     sortableFields: ["date", "title", "description", "body"]
     summary: "{{title}} - {{commit_author}}"
   - name: "tutorials" # Used in routes, e.g., /admin/collections/blog
@@ -52,7 +51,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Series", name: "series", widget: "list", required: false, allow_add: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Featured image", name: "featured_image", widget: "image"}
-      - {label: "Featured image username", name: "featured_image_username", widget: "string"}
+      - {label: "Featured image ID", name: "featured_image_id", widget: "string"}
     sortableFields: ["date", "title", "description", "body", "series"]
     summary: "{{title}} - {{commit_author}}"
