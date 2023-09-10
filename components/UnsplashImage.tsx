@@ -25,6 +25,7 @@ const UnsplashImage = async ({ imageId, type, classes, fill, priority, sizes }: 
       fill={fill}
       priority={priority}
       sizes={sizes}
+      unoptimized
     />
   );
 }
