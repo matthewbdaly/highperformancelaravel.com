@@ -1,25 +1,24 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
+import UnsplashImage from "./UnsplashImage";
 
 interface Props {
-  featured_image?: string,
-  featured_image_username?: string,
+  featured_image_id?: string,
   title: string,
   description: string
 };
 
-const Hero: FC<Props> = ({ featured_image, featured_image_username, title, description }): ReactElement => {
+const Hero: FC<Props> = ({ featured_image_id, title, description }): ReactElement => {
   return (
     <div className="heroWrapper">
-      {featured_image &&
-      <Image
-        src={`/${featured_image}`}
-        alt={`Photo by ${featured_image_username} on Unsplash`}
-        title={`Photo by ${featured_image_username} on Unsplash`}
+      {featured_image_id &&
+      <UnsplashImage
+        type="full"
+        imageId={featured_image_id}
+        classes="object-cover object-center blur-sm"
         fill={true}
         priority={true}
-        className="object-cover object-center blur-sm"
-        quality={5}
+        sizes="800px"
       />
       }
       <div className="heroContent">

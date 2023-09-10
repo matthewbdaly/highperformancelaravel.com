@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import React, { FC, ReactElement } from "react"
 import { Route } from "next";
 import UnsplashImage from "./UnsplashImage";
@@ -10,7 +9,7 @@ interface Props {
   slug: string;
   series?: string;
   href: string;
-  featured_image_id?: string;
+  featured_image_id: string;
 };
 
 const Card: FC<Props> = ({ title, description, href, slug, series, featured_image_id }): ReactElement => {
@@ -20,10 +19,10 @@ const Card: FC<Props> = ({ title, description, href, slug, series, featured_imag
         <section className="w-full rounded-lg shadow-lg border-2 overflow-hidden mb-2 bg-gradient-to-b from-slate-50 to-slate-100 dark:text-gray-600 hover:-translate-y-1 motion-reduce:hover:transform-none transition-transform duration-200 delay-200">
           <div className="w-full h-72 overflow-hidden relative">
             <UnsplashImage 
+              type="small"
               imageId={featured_image_id}
               classes="w-full h-64 object-cover object-center"
               fill={true}
-              quality={30}
               priority={true}
               sizes="400px"
             />
