@@ -17,6 +17,11 @@ export interface PostFileProps {
 const seriesDirectory = path.join(process.cwd(), "content/series")
 const tutorialsDirectory = path.join(process.cwd(), "content/tutorials")
 
+export const unsplashApi = createApi({
+  accessKey: process.env.UNSPLASH_ACCESS_KEY,
+  fetch: fetch
+});
+
 export const getAllSeries = (): Array<{
   title: string;
   slug: string;
@@ -89,15 +94,10 @@ export const getFeed = async () => {
     link: baseUrl.href
   })
 
-  const unsplashApi = createApi({
-    accessKey: process.env.UNSPLASH_ACCESS_KEY,
-    fetch: fetch
-  });
-
   getAllTutorials()
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
   .forEach(async (tutorial: PostFileProps) => {
-    const result = await unsplashApi.photos.get({ photoId: tutorial.imageId });
+    const result = await unsplashApi.photos.get({ photoId: tutorial.featured_image_id });
     if (result.type !== "success") {
       throw new Error(result.message);
     }

@@ -1,9 +1,5 @@
 import Image from "next/image";
-import { createApi } from "unsplash-js";
-
-const unsplashApi = createApi({
-  accessKey: process.env.UNSPLASH_ACCESS_KEY
-});
+import { unsplashApi } from '@/lib/functions';
 
 interface Props {
   imageId: string;
