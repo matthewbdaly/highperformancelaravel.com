@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { unsplashApi } from '@/lib/functions';
+import { getUnsplashPhoto } from '@/lib/functions';
 
 interface Props {
   imageId: string;
@@ -11,16 +11,13 @@ interface Props {
 };
 
 const UnsplashImage = async ({ imageId, type, classes, fill, priority, sizes }: Props) => {
-  const result = await unsplashApi.photos.get({ photoId: imageId });
-  if (result.errors) {
-    throw new Error(result.errors[0]);
-  }
+  const response = await getUnsplashPhoto(imageId);
 
   return (
     <Image
-      src={result.response.urls[type]}
-      alt={result.response.alt_description || ""}
-      blurDataURL={result.response.blur_hash || undefined}
+      src={response.urls[type]}
+      alt={response.alt_description || ""}
+      blurDataURL={response.blur_hash || undefined}
       className={classes}
       fill={fill}
       priority={priority}

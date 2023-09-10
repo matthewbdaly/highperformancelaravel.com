@@ -17,10 +17,28 @@ export interface PostFileProps {
 const seriesDirectory = path.join(process.cwd(), "content/series")
 const tutorialsDirectory = path.join(process.cwd(), "content/tutorials")
 
-export const unsplashApi = createApi({
-  accessKey: process.env.UNSPLASH_ACCESS_KEY,
-  fetch: fetch
-} as any);
+export interface UnsplashPhoto {
+  alt_description: string | null;
+  blur_hash: string | null;
+  urls: {
+    small: string;
+    raw: string;
+    full: string;
+    regular: string;
+    thumb: string;
+  }
+}
+export const getUnsplashPhoto = async (id: string): Promise<UnsplashPhoto> => {
+  const unsplashApi = createApi({
+    accessKey: process.env.UNSPLASH_ACCESS_KEY,
+    fetch: fetch
+  } as any);
+  const result = await unsplashApi.photos.get({ photoId: id });
+  if (result.errors) {
+    throw new Error(result.errors[0]);
+  }
+  return result.response;
+};
 
 export const getAllSeries = (): Array<{
   title: string;
@@ -29,13 +47,13 @@ export const getAllSeries = (): Array<{
   featured_image_id: string;
 }> => {
   return fs.readdirSync(seriesDirectory)
-    .map((filePath: string) => {
-      const fullPath = path.join(process.cwd(), `content/series/${filePath}`);
-      const source = fs.readFileSync(fullPath);
-      const { data } = matter(source)
-      data.slug = filePath.replace(/.md$/, "")
-      return ((data as unknown) as PostFileProps);
-    });
+  .map((filePath: string) => {
+    const fullPath = path.join(process.cwd(), `content/series/${filePath}`);
+    const source = fs.readFileSync(fullPath);
+    const { data } = matter(source)
+    data.slug = filePath.replace(/.md$/, "")
+    return ((data as unknown) as PostFileProps);
+  });
 };
 
 export const getAllTutorials = (): Array<PostFileProps> => {
@@ -46,9 +64,9 @@ export const getAllTutorials = (): Array<PostFileProps> => {
     const { data } = matter(source)
     data.slug = `${slugify(data.series.toLowerCase())}/${slugify(filePath.split('.')[0].toLowerCase())}`;
     return ((data as unknown) as PostFileProps);
-    }).sort((a, b) => {
-      return new Date(b.date).valueOf() - new Date(a.date).valueOf();
-    })
+  }).sort((a, b) => {
+    return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+  })
 };
 
 export const getTutorialFilenames = () : Array<{params: {series: string, slug: string}}> => {
@@ -68,10 +86,10 @@ export const getTutorialFilenames = () : Array<{params: {series: string, slug: s
 
 export const getFeed = async () => {
   const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
-  const feed = new Feed({
+    const feed = new Feed({
     title: "High Performance Laravel",
     description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
-    id: baseUrl.href,
+      id: baseUrl.href,
     link: baseUrl.href,
     language: "en",
     copyright: `All rights reserved Matthew Daly ${new Date().getFullYear()}`,
@@ -97,18 +115,16 @@ export const getFeed = async () => {
   getAllTutorials()
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
   .forEach(async (tutorial: PostFileProps) => {
-    const result = await unsplashApi.photos.get({ photoId: tutorial.featured_image_id });
-    if (result.errors) {
-      throw new Error(result.errors[0]);
-    }
+    const response = await getUnsplashPhoto(tutorial.featured_image_id);
     feed.addItem({
       title: tutorial.title,
       id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       date: new Date(tutorial.date),
       content: tutorial.description,
-      image: result.response.urls.regular
+      image: response.urls.regular
     });
   });
   return feed;
 };
+
