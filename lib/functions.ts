@@ -20,7 +20,7 @@ const tutorialsDirectory = path.join(process.cwd(), "content/tutorials")
 export const unsplashApi = createApi({
   accessKey: process.env.UNSPLASH_ACCESS_KEY,
   fetch: fetch
-});
+} as any);
 
 export const getAllSeries = (): Array<{
   title: string;
@@ -98,8 +98,8 @@ export const getFeed = async () => {
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
   .forEach(async (tutorial: PostFileProps) => {
     const result = await unsplashApi.photos.get({ photoId: tutorial.featured_image_id });
-    if (result.type !== "success") {
-      throw new Error(result.message);
+    if (result.errors) {
+      throw new Error(result.errors[0]);
     }
     feed.addItem({
       title: tutorial.title,
