@@ -17,7 +17,7 @@ interface Props {
 
 const UnsplashImage = async ({ imageId, type, classes, fill, priority, sizes }: Props) => {
   const result = await unsplashApi.photos.get({ photoId: imageId });
-  if (!result.type === "success") {
+  if (result.type !== "success") {
     throw new Error(result.message);
   }
 
