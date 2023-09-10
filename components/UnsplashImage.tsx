@@ -38,17 +38,23 @@ interface UnsplashPhoto {
 interface Props {
   id: string;
   type: "raw" | "full" | "regular" | "small" | "thumb" | "small_s3";
+  classes?: string;
+  fill: boolean;
+  priority: boolean;
+  sizes: string
 };
 
-const UnsplashImage = async ({ id, type }: Props) => {
+const UnsplashImage = async ({ id, type, classes, fill, priority, sizes }: Props) => {
   const photo: UnsplashPhoto = await unsplashApi.photos.getPhoto(id);
   return (
     <Image
       src={photo.urls[type]}
       alt={photo.alt_description}
       blurDataURL={photo.blur_hash}
-      width={400}
-      height={400}
+      className={classes}
+      fill={fill}
+      priority={priority}
+      sizes={sizes}
     />
   );
 }
