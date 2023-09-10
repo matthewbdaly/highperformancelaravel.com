@@ -15,7 +15,7 @@ const Hero: FC<Props> = ({ featured_image_id, title, description }): ReactElemen
       <UnsplashImage
         type="full"
         imageId={featured_image_id}
-        classes="object-cover object-center blur-sm"
+        classes="object-cover object-center"
         fill={true}
         priority={true}
         sizes="800px"
