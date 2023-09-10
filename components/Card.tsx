@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { FC, ReactElement } from "react"
 import { Route } from "next";
+import UnsplashImage from "./UnsplashImage";
 
 interface Props {
   title: string;
@@ -9,21 +10,18 @@ interface Props {
   slug: string;
   series?: string;
   href: string;
-  featured_image?: string;
-  featured_image_username?: string;
+  featured_image_id?: string;
 };
 
-const Card: FC<Props> = ({ title, description, href, slug, series, featured_image, featured_image_username }): ReactElement => {
+const Card: FC<Props> = ({ title, description, href, slug, series, featured_image_id }): ReactElement => {
   return (
     <div className="w-full shrink-0 xl:w-1/4 lg:w-1/3 md:w-1/2 md:pr-4 mb-4">
       <Link key={slug} href={href as Route}>
         <section className="w-full rounded-lg shadow-lg border-2 overflow-hidden mb-2 bg-gradient-to-b from-slate-50 to-slate-100 dark:text-gray-600 hover:-translate-y-1 motion-reduce:hover:transform-none transition-transform duration-200 delay-200">
           <div className="w-full h-72 overflow-hidden relative">
-            <Image 
-              src={`/${featured_image}`} 
-              alt={featured_image_username ? `Photo by ${featured_image_username} on Unsplash` : ''} 
-              title={featured_image_username ? `Photo by ${featured_image_username} on Unsplash` : ''} 
-              className="w-full h-64 object-cover object-center"
+            <UnsplashImage 
+              imageId={featured_image_id}
+              classes="w-full h-64 object-cover object-center"
               fill={true}
               quality={30}
               priority={true}
