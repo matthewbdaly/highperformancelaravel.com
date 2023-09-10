@@ -1,7 +1,5 @@
 ---
 title: Reducing repeated requests for the user with a decorator
-featured_image: img/ilya-pavlov-oqtafyt5ktw-unsplash.jpg
-featured_image_username: Ilya Pavlov
 description: If you're logged into your application, it may be making
   unnecessary repeated requests to fetch the user. Learn how to cache the user
   to eliminate this.

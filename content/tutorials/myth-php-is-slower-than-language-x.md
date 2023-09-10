@@ -1,7 +1,5 @@
 ---
 title: "Myth: PHP is slower than language X"
-featured_image: img/diego-ph-fiq0tet6llw-unsplash.jpg
-featured_image_username: Diego PH
 description: There are languages where the runtime is faster than PHP. However,
   that's often irrelevant since the language runtime isn't usually a significant
   bottleneck.

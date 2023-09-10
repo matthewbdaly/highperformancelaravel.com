@@ -4,8 +4,6 @@ description: Out of the box, Laravel supports a simple method of adding
   appropriate caching headers to HTTP responses to prevent unnecessary HTTP requests.
 date: "2023-08-26T14:21:04.837Z"
 series: Writing efficient applications
-featured_image: img/tengyart-al1bUu7EfAQ-unsplash.jpg
-featured_image_username: Tengyart
 featured_image_id: al1bUu7EfAQ
 ---
 Adding appropriate caching headers to an HTTP response can significantly reduce the size of responses, and in some cases can allow your application to return a simple 304 status code to indicate the response hasn't changed since the last request. Laravel supports a simple method of caching with the `cache.headers` middleware, but to use it, you first need to understand HTTP caching headers.

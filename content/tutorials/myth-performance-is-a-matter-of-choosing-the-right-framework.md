@@ -1,7 +1,5 @@
 ---
 title: "Myth: Performance is a matter of choosing the right framework"
-featured_image: img/carlos-muza-hpjsku2uysu-unsplash.jpg
-featured_image_username: Carlos Muza
 description: Performance benchmarks may seem a useful guide when picking a
   framework to develop your application in, but they need to be taken with a
   pinch of salt.

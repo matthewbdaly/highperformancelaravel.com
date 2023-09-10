@@ -1,7 +1,5 @@
 ---
 title: Reducing unnecessary dependencies in controllers
-featured_image: "img/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg"
-featured_image_username: Hal Gatewood
 description: Any dependencies in a controller can potentially slow down the
   response time. By managing them effectively, you can reduce their impact.
 date: "2023-08-26T14:21:04.837Z"

@@ -1,7 +1,5 @@
 ---
 title: "Myth: You need to use Octane to get acceptable performance from Laravel"
-featured_image: img/brenton-pearce-0iCCK42toA4-unsplash.jpg
-featured_image_username: Brenton Pearce
 description: Laravel Octane is a useful way of improving application
   performance. However, it can't help with everything and you shouldn't use it
   as a crutch.
