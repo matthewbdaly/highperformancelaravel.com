@@ -27,6 +27,10 @@ export interface UnsplashPhoto {
     regular: string;
     thumb: string;
   }
+  user: {
+    name: string;
+    username: string;
+  }
 }
 export const getUnsplashPhoto = async (id: string): Promise<UnsplashPhoto> => {
   const unsplashApi = createApi({
