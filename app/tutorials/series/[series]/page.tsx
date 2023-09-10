@@ -13,6 +13,7 @@ const getSeriesBySlug = async (slug: string): Promise<{
   data: {
     title: string;
     description: string;
+    featured_image_id: string;
   },
 }> => {
   const filePath = path.join(process.cwd(), "content/series/", `${slug}.md`);

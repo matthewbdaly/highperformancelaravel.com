@@ -3,13 +3,14 @@ import path from "path";
 import matter from "gray-matter";
 import slugify from "slugify";
 import { Feed } from 'feed';
+import { createApi } from "unsplash-js";
 
 export interface PostFileProps {
   title: string;
   description: string;
   date: string;
   series: string;
-  featured_image_id?: string;
+  featured_image_id: string;
   slug: string;
 };
 
@@ -20,7 +21,7 @@ export const getAllSeries = (): Array<{
   title: string;
   slug: string;
   description: string;
-  featured_image?: string;
+  featured_image_id: string;
 }> => {
   return fs.readdirSync(seriesDirectory)
     .map((filePath: string) => {
@@ -60,7 +61,7 @@ export const getTutorialFilenames = () : Array<{params: {series: string, slug: s
   });
 };
 
-export const getFeed = () => {
+export const getFeed = async () => {
   const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
   const feed = new Feed({
     title: "High Performance Laravel",
@@ -88,16 +89,25 @@ export const getFeed = () => {
     link: baseUrl.href
   })
 
+  const unsplashApi = createApi({
+    accessKey: process.env.UNSPLASH_ACCESS_KEY,
+    fetch: fetch
+  });
+
   getAllTutorials()
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
-  .forEach((tutorial: PostFileProps) => {
+  .forEach(async (tutorial: PostFileProps) => {
+    const result = await unsplashApi.photos.get({ photoId: tutorial.imageId });
+    if (result.type !== "success") {
+      throw new Error(result.message);
+    }
     feed.addItem({
       title: tutorial.title,
       id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
       date: new Date(tutorial.date),
       content: tutorial.description,
-      image: `${baseUrl.href}${tutorial.featured_image}`
+      image: result.response.urls.regular
     });
   });
   return feed;

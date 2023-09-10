@@ -3,7 +3,7 @@ import { FC, ReactElement } from "react";
 import UnsplashImage from "./UnsplashImage";
 
 interface Props {
-  featured_image_id?: string,
+  featured_image_id: string,
   title: string,
   description: string
 };
