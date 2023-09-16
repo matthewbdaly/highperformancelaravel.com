@@ -90,10 +90,10 @@ export const getTutorialFilenames = () : Array<{params: {series: string, slug: s
 
 export const getFeed = async () => {
   const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
-    const feed = new Feed({
+  const feed = new Feed({
     title: "High Performance Laravel",
     description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
-      id: baseUrl.href,
+    id: baseUrl.href,
     link: baseUrl.href,
     language: "en",
     copyright: `All rights reserved Matthew Daly ${new Date().getFullYear()}`,
@@ -109,12 +109,12 @@ export const getFeed = async () => {
       rss: `${baseUrl.href}rss.xml`,
       atom: `${baseUrl.href}atom.xml`
     },
-  })
+  });
   feed.addContributor({
     name: "Matthew Daly",
     email: "hello@highperformance.laravel.com",
     link: baseUrl.href
-  })
+  });
 
   getAllTutorials()
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
@@ -131,4 +131,3 @@ export const getFeed = async () => {
   });
   return feed;
 };
-
