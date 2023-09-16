@@ -116,18 +116,20 @@ export const getFeed = async () => {
     link: baseUrl.href
   });
 
-  getAllTutorials()
-  .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
-  .forEach(async (tutorial: PostFileProps) => {
-    const response = await getUnsplashPhoto(tutorial.featured_image_id);
-    feed.addItem({
-      title: tutorial.title,
-      id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
-      link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
-      date: new Date(tutorial.date),
-      content: tutorial.description,
-      image: response.urls.regular
-    });
-  });
+  await Promise.all(
+    getAllTutorials()
+    .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+    .map(async (tutorial: PostFileProps) => {
+      const response = await getUnsplashPhoto(tutorial.featured_image_id);
+      feed.addItem({
+        title: tutorial.title,
+        id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
+        link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
+        date: new Date(tutorial.date),
+        content: tutorial.description,
+        image: response.urls.regular
+      });
+    })
+  );
   return feed;
 };
