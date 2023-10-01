@@ -118,7 +118,7 @@ export const getFeed = async () => {
 
   await Promise.all(
     getAllTutorials()
-    .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
     .map(async (tutorial: PostFileProps) => {
       const response = await getUnsplashPhoto(tutorial.featured_image_id);
       feed.addItem({
