@@ -6,7 +6,7 @@ series: Front end
 featured_image_id: 1weQp50r6fQ
 ---
 
-Providing too-large or unnecessarily high quality images is a common mistake on many applications. Sometimes clients will provide images that are far too large, or of a quality that is simply unnecessary for that particular use case, and thus the files are significantly large than they need to be. This can cause a noticeable difference in page loading times.
+Providing too-large or unnecessarily high quality images is a common mistake on many applications. Sometimes clients will provide images that are far too large, or of a quality that is simply unnecessary for that particular use case, and thus the files are significantly larger than they need to be. This can cause a noticeable difference in page loading times.
 
 Adding an appropriate caching policy for images will be helpful, but won't eliminate the problem entirely. And while for images that form a part of the site code you can optimize the images yourself using image editing software, that's not an option for dynamic images uploaded by site users. Here are some suggestions for optimizing the images on your site.
 
