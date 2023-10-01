@@ -45,6 +45,10 @@ I've picked up some very useful tips from this site, and it's well worth bookmar
 
 This video course is very good for helping you to do more with your database queries, while still benefiting from the power of Eloquent. If you're struggling to write more complex database queries with Eloquent, it's well worth getting your boss to pay for this.
 
+#### [Servers for Hackers](https://serversforhackers.com/)
+
+This site is very good for learning about server configuration, and includes some great information on optimising your production servers.
+
 ### I've seen something that I think is incorrect...
 
 Send me a message via the [contact form](/contact).
