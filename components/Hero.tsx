@@ -15,7 +15,7 @@ const Hero: FC<Props> = async ({ featured_image_id, title, description }): Promi
     <div className="heroWrapper">
       {featuredImage &&
       <Image
-        src={featuredImage.urls.full}
+        src={featuredImage.urls.regular}
         alt={featuredImage.alt_description || ""}
         blurDataURL={featuredImage.blur_hash || undefined}
         className="object-cover object-center"
