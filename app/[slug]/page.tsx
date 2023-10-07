@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-import TextSection from "../../components/TextSection";
-import Sidebar from "../../components/Sidebar";
+import TextSection from "@/components/TextSection";
+import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
 import fs from "fs";
 import path from 'path';
