@@ -1,6 +1,6 @@
 ---
 title: "Myth: Relational databases are too slow and don't scale"
-description: Relational databases are a good fit for most use cases, but there are some gotchas to be aware of
+description: Relational databases are a good fit for most use cases, but there are some gotchas to be aware of when using them.
 date: 2023-09-19T21:30:00.837Z
 series: Myth Busters
 featured_image_id: GNyjCePVRs8
