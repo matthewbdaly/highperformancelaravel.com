@@ -8,8 +8,7 @@ featured_image_id: al1bUu7EfAQ
 ---
 Adding appropriate caching headers to an HTTP response can significantly reduce the size of responses, and in some cases can allow your application to return a simple 304 status code to indicate the response hasn't changed since the last request. Laravel supports a simple method of caching with the `cache.headers` middleware, but to use it, you first need to understand HTTP caching headers.
 
-A quick primer on HTTP caching headers
-======================================
+## A quick primer on HTTP caching headers
 
 The main header involved is the `Cache-Control` header. This supports multiple values, and a high-level overview of the most important of these headers is as follows:
 
@@ -22,8 +21,7 @@ The main header involved is the `Cache-Control` header. This supports multiple v
 
 This is just a very short breakdown of some of the most common headers. For a better understanding of caching headers, I highly recommend [the relevant article on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching).
 
-Using these in Laravel
-======================
+## Using these in Laravel
 
 As mentioned, these headers can all be set using one simple method - the `cache.headers` middleware. However, it needs additional parameters to be passed in when calling it, in order to set an appropriate caching policy for that specific asset.
 
@@ -61,7 +59,6 @@ Whichever approach makes sense for that part of the application will be fine. Th
 
 If you have an application with more exacting requirements, it *might* be worth writing a custom middleware to set these response headers, but this should be rare.
 
-Additional benefits
-===================
+## Additional benefits
 
 Adding appropriate caching headers to your application has even more benefits when accessed via any kind of caching web proxy, whether that's on your server (if you've configured Nginx to cache the responses, or perhaps you've set up Varnish), or closer to the client (such as if it's being accessed by multiple users who are on a network using a proxy like Squid). By going with the grain of HTTP and setting suitable caching headers, proxies like these will know what to cache, when, and for how long, reducing the amount of bandwidth used between the cache and the client.
