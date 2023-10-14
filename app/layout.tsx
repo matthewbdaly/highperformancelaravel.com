@@ -30,9 +30,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: baseUrl,
-    languages: {
-      'en': baseUrl
-    },
     types: {
       'application/rss+xml': `${baseUrl}rss.xml`,
       'application/atom+xml': `${baseUrl}atom.xml`,
