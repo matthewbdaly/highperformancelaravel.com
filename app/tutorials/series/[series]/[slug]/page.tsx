@@ -10,6 +10,8 @@ import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
+
 const getPostBySlug = async (slug: string): Promise<{
   data: PostFileProps,
   content: string
@@ -32,6 +34,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { data } = await getPostBySlug(params.slug);
   const featuredImage = await getUnsplashPhoto(data.featured_image_id);
+  const url = `${baseUrl}tutorials/series/${params.series}/${params.slug}`;
   return {
     title: {
       absolute: data.title
@@ -40,8 +43,10 @@ export async function generateMetadata({
     openGraph: {
       title: data.title,
       description: data.description,
+      siteName: `High Performance Laravel`,
       locale: `en`,
       type: 'website',
+      url: url,
       images: [
         {
           url: featuredImage.urls.thumb,

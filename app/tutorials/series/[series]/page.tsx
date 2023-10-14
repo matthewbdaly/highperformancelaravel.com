@@ -9,6 +9,8 @@ import Card from "@/components/Card";
 import { getAllSeries, getAllTutorials } from "@/lib/functions";
 import Hero from "@/components/Hero";
 
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
+
 const getSeriesBySlug = async (slug: string): Promise<{
   data: {
     title: string;
@@ -33,14 +35,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { data } = await getSeriesBySlug(params.series);
   const featuredImage = await getUnsplashPhoto(data.featured_image_id);
+  const url = `${baseUrl}tutorials/series/${params.series}`;
   return {
     title: data.title,
     description: data.description,
     openGraph: {
       title: data.title,
       description: data.description,
+      siteName: `High Performance Laravel`,
       locale: `en`,
       type: 'website',
+      url: url,
       images: [
         {
           url: featuredImage.urls.thumb,
