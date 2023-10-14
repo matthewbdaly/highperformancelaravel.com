@@ -1,5 +1,5 @@
 import TextSection from "@/components/TextSection";
-import { getTutorialFilenames, PostFileProps } from "@/lib/functions";
+import { getTutorialFilenames, getUnsplashPhoto, PostFileProps } from "@/lib/functions";
 import matter from "gray-matter";
 import fs from "fs";
 import { Metadata } from "next";
@@ -30,13 +30,25 @@ export async function generateMetadata({
 }: {
   params: { series: string, slug: string };
 }): Promise<Metadata> {
-  const page = await getPostBySlug(params.slug);
+  const { data } = await getPostBySlug(params.slug);
+  const featuredImage = await getUnsplashPhoto(data.featured_image_id);
   return {
-    title: page.data.title,
-    description: page.data.description,
+    title: {
+      absolute: data.title
+    },
+    description: data.description,
     openGraph: {
-      title: page.data.title,
-      description: page.data.description
+      title: data.title,
+      description: data.description,
+      locale: `en`,
+      type: 'website',
+      images: [
+        {
+          url: featuredImage.urls.thumb,
+          width: 400,
+          height: 400,
+        }
+      ]
     }
   }
 }

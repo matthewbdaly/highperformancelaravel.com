@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
-import { PostFileProps } from "@/lib/functions";
+import { PostFileProps, getUnsplashPhoto } from "@/lib/functions";
 import Card from "@/components/Card";
 import { getAllSeries, getAllTutorials } from "@/lib/functions";
 import Hero from "@/components/Hero";
@@ -32,12 +32,22 @@ export async function generateMetadata({
   params: { series: string };
 }): Promise<Metadata> {
   const { data } = await getSeriesBySlug(params.series);
+  const featuredImage = await getUnsplashPhoto(data.featured_image_id);
   return {
-    title: `${data.title} | High Performance Laravel`,
+    title: data.title,
     description: data.description,
     openGraph: {
-      title: `${data.title} | High Performance Laravel`,
-      description: data.description
+      title: data.title,
+      description: data.description,
+      locale: `en`,
+      type: 'website',
+      images: [
+        {
+          url: featuredImage.urls.thumb,
+          width: 400,
+          height: 400,
+        }
+      ]
     }
   }
 }
