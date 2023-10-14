@@ -5,7 +5,7 @@ import { ReactElement } from "react";
 
 export const metadata: Metadata ={
   metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
-  title: `Series | High Performance Laravel`,
+  title: `Series`,
   openGraph: {
     title: `Series | High Performance Laravel`,
   }

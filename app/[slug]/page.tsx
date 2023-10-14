@@ -39,7 +39,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { data } = await getPageContent(params.slug);
   return {
-    title: `${data.title} | High Performance Laravel`,
+    title: data.title,
     description: data.description,
     openGraph: {
       title: `${data.title} | High Performance Laravel`,
