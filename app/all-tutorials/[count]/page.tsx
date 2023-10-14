@@ -8,15 +8,15 @@ const PageSize = 8;
 
 export const metadata: Metadata = {
   metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
-  title: `Tutorials | High Performance Laravel`,
+  title: `Tutorials`,
   openGraph: {
     title: `Tutorials | High Performance Laravel`,
   }
 }
 
-export default async function Page({ 
+export default async function Page({
   params,
-}: { 
+}: {
   params: { count: string };
 }): Promise<ReactElement> {
   const page = Number(params.count);
