@@ -13,9 +13,12 @@ export default function Home() {
         <blockquote>
           <h3>Unlock the full potential of your Laravel code.</h3>
           <p>When you first start working with Laravel, it can be hard to understand the real reasons for slow application performance. There&apos;s a lot of misinformation around, and claims that Laravel or PHP are inherently slow, which just isn&apos;t the case, but are hard to debunk when you first start out.</p>
-          <p>As a Laravel developer, I know the <strong>real</strong> pain points and common issues that can slow down your Laravel application. With High Performance Laravel, I&apos;ll share my best practices and insights to help you resolve common performance bottlenecks in your application.</p>
+          <p>As a web developer for well over a decade, and having used Laravel on many different projects over the last eight years, I know the <strong>real</strong> pain points and common issues that can slow down your Laravel application. With High Performance Laravel, I&apos;ll share my best practices and insights to help you resolve common performance bottlenecks in your application.</p>
         </blockquote>
-        <h4>Current articles...</h4>
+        <h3>Performance is a process, not a product</h3>
+        <p>There&apos;s no one off-the-shelf solution (whether that&apos;s a new language, a new framework, or something else entirely) that will prevent an application from being slow. Rewriting something ostensibly for performance reasons is a <em>very</em> dangerous road to go down if you don&apos;t understand the real reason for performance - you could easily spend months rebuilding something and end up with little or no improvement to show for it.</p>
+        <p>I&apos;ll help you identify some of the misleading myths about application performance, the actual bottlenecks you can expect to encounter and how to deal with them. I&apos;ll also provide high level strategies for better performance, and tips on how to optimise performance further.</p>
+        <h4>Current series of articles...</h4>
         <h5>
           <Link href="/tutorials/series/myth-busters"><em>Avoid falling for performance myths</em></Link>
         </h5>
