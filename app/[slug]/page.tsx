@@ -48,7 +48,7 @@ export async function generateMetadata({
       title: `${data.title} | High Performance Laravel`,
       description: data.description,
       type: 'website',
-      url: baseUrl,
+      url: `${baseUrl}/${params.slug}`,
       images: [
         {
           url: logo.src,

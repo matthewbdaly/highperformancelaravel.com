@@ -12,7 +12,7 @@ export const metadata: Metadata ={
   openGraph: {
     title: `Series | High Performance Laravel`,
     type: 'website',
-    url: baseUrl,
+    url: `${baseUrl}/tutorials/series`,
     images: [
       {
         url: logo.src,

@@ -9,20 +9,26 @@ const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://loc
 
 const PageSize = 8;
 
-export const metadata: Metadata = {
-  metadataBase: baseUrl,
-  title: `Tutorials`,
-  openGraph: {
-    title: `Tutorials | High Performance Laravel`,
-    type: 'website',
-    url: baseUrl,
-    images: [
-      {
-        url: logo.src,
-        width: logo.width,
-        height: logo.height
-      }
-    ]
+export async function generateMetadata({
+  params,
+}: {
+  params: { count: string };
+}): Promise<Metadata> {
+  return {
+    metadataBase: baseUrl,
+    title: `Tutorials`,
+    openGraph: {
+      title: `Tutorials | High Performance Laravel`,
+      type: 'website',
+      url: `${baseUrl}/all-tutorials/${params.count}`,
+      images: [
+        {
+          url: logo.src,
+          width: logo.width,
+          height: logo.height
+        }
+      ]
+    }
   }
 }
 
