@@ -5,6 +5,9 @@ import { Metadata } from "next";
 import fs from "fs";
 import path from 'path';
 import matter from 'gray-matter';
+import logo from "@/public/img/logo.png";
+
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
 export interface PageFileProps {
   title: string;
@@ -43,7 +46,16 @@ export async function generateMetadata({
     description: data.description,
     openGraph: {
       title: `${data.title} | High Performance Laravel`,
-      description: data.description
+      description: data.description,
+      type: 'website',
+      url: baseUrl,
+      images: [
+        {
+          url: logo.src,
+          width: logo.width,
+          height: logo.height
+        }
+      ]
     }
   }
 }

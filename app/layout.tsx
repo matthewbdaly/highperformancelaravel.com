@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import Footer from '@/components/Footer';
+import logo from "@/public/img/logo.png";
 
 const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
@@ -22,7 +23,14 @@ export const metadata: Metadata = {
     description: `Learn how to optimize your Laravel application for high performance, and avoid wasting time on pointless performance myths`,
     locale: `en`,
     type: 'website',
-    url: baseUrl
+    url: baseUrl,
+    images: [
+      {
+        url: logo.src,
+        width: logo.width,
+        height: logo.height
+      }
+    ]
   },
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#3b0764' },

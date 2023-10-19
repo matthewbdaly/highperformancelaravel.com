@@ -2,12 +2,24 @@ import Card from "@/components/Card";
 import { getAllSeries } from "@/lib/functions";
 import { Metadata } from "next";
 import { ReactElement } from "react";
+import logo from "@/public/img/logo.png";
+
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
 export const metadata: Metadata ={
-  metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
+  metadataBase: baseUrl,
   title: `Series`,
   openGraph: {
     title: `Series | High Performance Laravel`,
+    type: 'website',
+    url: baseUrl,
+    images: [
+      {
+        url: logo.src,
+        width: logo.width,
+        height: logo.height
+      }
+    ]
   }
 }
 

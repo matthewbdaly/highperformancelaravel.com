@@ -3,14 +3,26 @@ import { getAllTutorials } from '@/lib/functions';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ReactElement } from 'react';
+import logo from "@/public/img/logo.png";
+
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
 const PageSize = 8;
 
 export const metadata: Metadata = {
-  metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
+  metadataBase: baseUrl,
   title: `Tutorials`,
   openGraph: {
     title: `Tutorials | High Performance Laravel`,
+    type: 'website',
+    url: baseUrl,
+    images: [
+      {
+        url: logo.src,
+        width: logo.width,
+        height: logo.height
+      }
+    ]
   }
 }
 

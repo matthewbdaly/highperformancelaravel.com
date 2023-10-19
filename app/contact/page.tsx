@@ -2,12 +2,24 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
 import { ReactElement } from "react";
+import logo from "@/public/img/logo.png";
+
+const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
 
 export const metadata: Metadata = {
-  metadataBase: process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`),
+  metadataBase: baseUrl,
   title: `Contact me`,
   openGraph: {
     title: `Contact me | High Performance Laravel`,
+    type: 'website',
+    url: baseUrl,
+    images: [
+      {
+        url: logo.src,
+        width: logo.width,
+        height: logo.height
+      }
+    ]
   }
 }
 
