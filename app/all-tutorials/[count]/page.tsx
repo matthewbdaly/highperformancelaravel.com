@@ -20,7 +20,7 @@ export async function generateMetadata({
     openGraph: {
       title: `Tutorials | High Performance Laravel`,
       type: 'website',
-      url: `${baseUrl}/all-tutorials/${params.count}`,
+      url: `${baseUrl}all-tutorials/${params.count}`,
       images: [
         {
           url: logo.src,
