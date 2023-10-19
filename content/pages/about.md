@@ -49,6 +49,10 @@ This video course is very good for helping you to do more with your database que
 
 This site is very good for learning about server configuration, and includes some great information on optimising your production servers.
 
+### [Use the Index, Luke](https://use-the-index-luke.com/)
+
+This is a bit old, but still a great resource for learning about how to create and use of indexes to speed up your queries.
+
 ## I've seen something that I think is incorrect...
 
 Send me a message via the [contact form](/contact).
