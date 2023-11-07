@@ -1,19 +1,11 @@
 import Header from '@/components/Header';
 import './globals.css'
-import { Viewport } from 'next'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import Footer from '@/components/Footer';
 import logo from "@/public/img/logo.png";
 
 const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://localhost:${process.env.PORT || 3000}`);
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#3b0764' },
-    { media: '(prefers-color-scheme: dark)', color: '#3b0764' },
-  ],
-};
 
 export const metadata: Metadata = {
   metadataBase: baseUrl,
@@ -40,6 +32,10 @@ export const metadata: Metadata = {
       }
     ]
   },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#3b0764' },
+    { media: '(prefers-color-scheme: dark)', color: '#3b0764' },
+  ],
   alternates: {
     canonical: baseUrl,
     types: {
