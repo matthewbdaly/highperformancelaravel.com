@@ -21,6 +21,7 @@ export default function ContactForm(): ReactElement {
 
   return (
     <form name="contact" method="POST" netlify-honeypot="employer-name" data-netlify="true" data-netlify-recaptcha="true" className="my-4" onSubmit={validateSubmit}>
+      <input type="hidden" name="form-name" value="contact" />
       {submitted && <p className="bg-purple-200 p-2 my-2">Thank you for your submission</p>}
       <p className="hidden">
         <label>Employer Name: <input type="text" name="employer-name" /></label>
