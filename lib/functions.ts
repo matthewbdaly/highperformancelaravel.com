@@ -125,8 +125,7 @@ export const getFeed = async () => {
         id: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
         link: `${baseUrl.href}tutorials/series/${tutorial.slug}`,
         date: new Date(tutorial.date),
-        content: tutorial.description,
-        image: response.urls.regular
+        content: tutorial.description
       });
     })
   );
