@@ -1,7 +1,7 @@
 ---
 title: Optimise analytics scripts with Partytown
 description: Analytics scripts can be detrimental to the performance of your site, but there are sometimes ways you can improve this.
-date: "2023-12-26T14:21:04.837Z"
+date: "2023-12-26T14:45:04.837Z"
 series: Front end
 featured_image_id: tAH2cA_BL5g
 ---
@@ -24,7 +24,7 @@ Going forward it wouldn't surprise me if at some point analytics solutions will 
 
 Other solutions for this problem could include:
 
-* *Using a server side analytics service that doesn't affect the end user's experience* - this may limit what data you can collect, but it may be you don't need to provide all that data anyway.
-* *Using an off the shelf analytics package* - if the existing services don't really work for you, this may be a good solution that offers easy integration with minimal work on your part.
-* *Roll your own bespoke server side analytics solution* - if none of the existing solutions work for you, this may be the best option. It allows deeper integration with your own project. In theory, this can be quite easy, and if implemented well it won't have any noticeable effect on performance. I'd be inclined to implement this as a middleware that's applied to all the routes I wanted to monitor, and might consider using the message queue to ensure the work of storing the analytics data was done asynchronously
-* *Go without* - if you have a project where the sort of user stats provided by analytics aren't strictly required, there's no reason why you need to include it. It may be you can get similar stats through other means, such as user sessions or signups, or it may be that it has a captive audience, such as an intranet system. In cases like these, it's worth considering if you actually need any analytics at all.
+* **Using a server side analytics service that doesn't affect the end user's experience** - this may limit what data you can collect, but it may be you don't need to provide all that data anyway.
+* **Using an off the shelf server side analytics package** - if the existing services don't really work for you, this may be a good solution that offers easy integration with minimal work on your part.
+* **Roll your own bespoke server side analytics solution** - if none of the existing solutions work for you, this may be the best option. It allows deeper integration with your own project. In theory, this can be quite easy, and if implemented well it won't have any noticeable effect on performance. I'd be inclined to implement this as a middleware that's applied to all the routes I wanted to monitor, and might consider using the message queue to ensure the work of storing the analytics data was done asynchronously
+* **Go without** - if you have a project where the sort of user stats provided by analytics aren't strictly required, there's no reason why you need to include it. It may be you can get similar stats through other means, such as user sessions or signups, or it may be that it has a captive audience, such as an intranet system. In cases like these, it's worth considering if you actually need any analytics at all.
