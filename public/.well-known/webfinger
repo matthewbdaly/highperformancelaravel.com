@@ -1,0 +1,11 @@
+{
+	"subject": "acct:posts@highperformancelaravel.com",
+
+	"links": [
+		{
+			"rel": "self",
+			"type": "application/activity+json",
+			"href": "https://highperformancelaravel.com/actor"
+		}
+	]
+}
