@@ -19,6 +19,7 @@ const nextConfig = {
       }
     ]
   },
+  transpilePackages: ["next-image-export-optimizer"]
 };
 
 module.exports = nextConfig
