@@ -41,9 +41,13 @@ This is a great resource for learning a number of techniques for optimising your
 
 I've picked up some very useful tips from this site, and it's well worth bookmarking for future reference.
 
+### [Visual Explain for MySQL](https://mysqlexplain.com/)
+
+Made by the author of SQL For Devs, this is a great resource for examining your queries for potential optimisations.
+
 ### [Eloquent Performance Patterns](https://eloquent-course.reinink.ca/)
 
-This video course is very good for helping you to do more with your database queries, while still benefiting from the power of Eloquent. If you're struggling to write more complex database queries with Eloquent, it's well worth getting your boss to pay for this.
+This video course is very good for helping you to do more with your database queries, while still benefiting from the power of Eloquent. If you're struggling to write more complex database queries with Eloquent, it's well worth getting your boss to pay for this. It's also available on [Laracasts](https://laracasts.com/series/eloquent-performance-patterns) if you have that.
 
 ### [Servers for Hackers](https://serversforhackers.com/)
 
