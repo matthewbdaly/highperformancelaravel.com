@@ -1,6 +1,6 @@
 ---
 title: "Granular profiling with Symfony Stopwatch"
-description: 
+description: It's not always easy to profile each step of a loop for long running tasks, but Symfony Stopwatch provides a way to do so fairly easily.
 date: "2024-09-01T19:00:00.837Z"
 series: Writing efficient applications
 featured_image_id: VwqMTcsb0Tg
