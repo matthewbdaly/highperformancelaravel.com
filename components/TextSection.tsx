@@ -7,6 +7,7 @@ import CodeBlock from "./CodeBlock";
 import Header1 from "./Header1";
 import Header2 from "./Header2";
 import Header3 from "./Header3";
+import Info from "./Info";
 import ListItem from "./ListItem";
 import Paragraph from "./Paragraph";
 import Pre from "./Pre";
@@ -30,14 +31,15 @@ const components: Components = {
   li: ListItem,
   p: Paragraph,
   pre: Pre,
-  ul: UnorderedList
+  ul: UnorderedList,
+  Info,
 };
 
 const TextSection: FC<Props> = ({ children, data }): ReactElement => {
   return (
     <section>
-      <MDXRemote 
-        source={children} 
+      <MDXRemote
+        source={children}
         components={components}
         options={{
           scope: data as { [key: string]: unknown } & (PageFileProps | PostFileProps),
@@ -46,7 +48,8 @@ const TextSection: FC<Props> = ({ children, data }): ReactElement => {
             rehypePlugins: [rehypePrism],
             development: process.env.NODE_ENV === "development",
             format: 'mdx'
-        }}}
+          }
+        }}
       />
     </section>
   );

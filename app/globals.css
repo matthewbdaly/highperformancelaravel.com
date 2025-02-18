@@ -49,6 +49,9 @@
   .icon-dev:before {
     content: "\e905";
   }
+  .icon-lightbulb-o:before {
+    content: "\f0eb";
+  }
   body {
     @apply font-sans bg-gray-50 text-gray-600 dark:text-gray-700 dark:bg-gray-100;
 
@@ -146,6 +149,18 @@
 
           blockquote {
             @apply w-full bg-purple-50 border-purple-400 border-l-4 p-4 shadow-lg my-4 dark:text-gray-700 rounded-r-lg;
+          }
+
+          .info {
+            @apply w-full bg-purple-200 border-2 p-4 my-4 rounded-lg shadow-lg dark:text-gray-700 flex flex-row items-center;
+
+            i {
+              @apply text-8xl block w-1/6 h-full text-center;
+            }
+
+            section {
+              @apply w-5/6;
+            }
           }
 
           .fallback-links {
