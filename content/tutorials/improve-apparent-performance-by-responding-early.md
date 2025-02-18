@@ -1,5 +1,5 @@
 ---
-title: "Improve apparent performance by deferring the response"
+title: "Improve apparent performance by responding early"
 description: Sometimes it's as useful to get back to the user quickly as it is to actually make something performant.
 date: "2025-02-18T12:00:00.837Z"
 series: Writing efficient applications
