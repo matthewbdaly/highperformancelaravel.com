@@ -1,11 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Search from "./Search";
 
 export default function Header(): ReactElement {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header>
