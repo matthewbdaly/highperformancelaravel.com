@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 
-export default function ContactForm(): ReactElement {
+export default function ContactForm(): ReactElement<any> {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM as string);
 
   if (state.succeeded) {

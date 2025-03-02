@@ -8,7 +8,7 @@ interface Props {
   description: string
 };
 
-const Hero: FC<Props> = async ({ featured_image_id, title, description }): Promise<ReactElement> => {
+const Hero: FC<Props> = async ({ featured_image_id, title, description }): Promise<ReactElement<any>> => {
   const featuredImage = await getUnsplashPhoto(featured_image_id);
 
   return (

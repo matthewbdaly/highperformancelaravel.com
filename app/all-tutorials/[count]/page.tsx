@@ -9,11 +9,12 @@ const baseUrl = process.env.URL ? new URL(process.env.URL) : new URL(`http://loc
 
 const PageSize = 8;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { count: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ count: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   return {
     metadataBase: baseUrl,
     title: `Tutorials`,
@@ -32,11 +33,12 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { count: string };
-}): Promise<ReactElement> {
+export default async function Page(
+  props: {
+    params: Promise<{ count: string }>;
+  }
+): Promise<ReactElement<any>> {
+  const params = await props.params;
   const page = Number(params.count);
   const total = getAllTutorials();
   const entries = total.slice((page - 1) * PageSize, page * PageSize);

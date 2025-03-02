@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function Page(): ReactElement {
+export default function Page(): ReactElement<any> {
   return (
     <section className="content-wrapper">
       <div className="content">

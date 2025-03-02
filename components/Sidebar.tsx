@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import ExportedImage from "next-image-export-optimizer";
 import profilePic from "../public/img/profile.png";
 
-export default function Sidebar(): ReactElement {
+export default function Sidebar(): ReactElement<any> {
   return (
     <aside>
       <section>

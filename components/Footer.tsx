@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactElement } from "react";
 
-export default function Footer(): ReactElement {
+export default function Footer(): ReactElement<any> {
   return (
     <footer>
       <section>

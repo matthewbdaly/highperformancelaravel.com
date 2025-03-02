@@ -1,6 +1,6 @@
 import React, { AnchorHTMLAttributes, ReactElement } from "react"
 
-const Anchor = ({ children, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement>): ReactElement => {
+const Anchor = ({ children, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement>): ReactElement<any> => {
   return (
     <a className="text-purple-700 underline" {...rest}>
       {children}

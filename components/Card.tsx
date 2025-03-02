@@ -12,7 +12,7 @@ interface Props {
   featured_image_id: string;
 };
 
-const Card: FC<Props> = ({ title, description, href, slug, series, featured_image_id }): ReactElement => {
+const Card: FC<Props> = ({ title, description, href, slug, series, featured_image_id }): ReactElement<any> => {
   return (
     <div className="w-full shrink-0 xl:w-1/4 lg:w-1/2 md:pr-4 mb-4">
       <Link key={slug} href={href as Route}>

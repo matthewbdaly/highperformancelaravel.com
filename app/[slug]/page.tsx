@@ -35,11 +35,12 @@ const getPageFilenames = (): Array<string> => {
   return fileNames.map(fileName => fileName.replace(/.md$/, ""));
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { data } = await getPageContent(params.slug);
   return {
     title: data.title,
@@ -60,11 +61,12 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<ReactElement> {
+export default async function Page(
+  props: {
+    params: Promise<{ slug: string }>;
+  }
+): Promise<ReactElement<any>> {
+  const params = await props.params;
   const { content, data } = await getPageContent(params.slug);
 
   return (

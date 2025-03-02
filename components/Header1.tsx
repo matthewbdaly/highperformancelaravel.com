@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactElement } from "react"
 
-const Header1 = ({ children, ...rest }: HTMLAttributes<HTMLHeadingElement>): ReactElement => {
+const Header1 = ({ children, ...rest }: HTMLAttributes<HTMLHeadingElement>): ReactElement<any> => {
   return (
     <h1 {...rest}>
       {children}

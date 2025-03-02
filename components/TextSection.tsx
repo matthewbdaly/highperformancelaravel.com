@@ -35,7 +35,7 @@ const components: Components = {
   Info,
 };
 
-const TextSection: FC<Props> = ({ children, data }): ReactElement => {
+const TextSection: FC<Props> = ({ children, data }): ReactElement<any> => {
   return (
     <section>
       <MDXRemote

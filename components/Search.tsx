@@ -10,7 +10,7 @@ interface SearchItem {
   link: string;
 }
 
-export default function Search(): ReactElement {
+export default function Search(): ReactElement<any> {
   const [searchResults, setSearchResults] = useState<Fuse.FuseResult<SearchItem>[]>([]);
 
   const fuse = useMemo(() => new Fuse([], { keys: ["title", "description", "series"], shouldSort: true }), []);

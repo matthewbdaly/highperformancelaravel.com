@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactElement } from "react"
 
-const UnorderedList = ({ children, ...rest }: HTMLAttributes<HTMLUListElement>): ReactElement => {
+const UnorderedList = ({ children, ...rest }: HTMLAttributes<HTMLUListElement>): ReactElement<any> => {
   return (
     <ul className="pl-4 list-disc" {...rest}>
       {children}

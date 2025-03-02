@@ -5,7 +5,7 @@ import { ReactElement, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Search from "./Search";
 
-export default function Header(): ReactElement {
+export default function Header(): ReactElement<any> {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 

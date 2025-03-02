@@ -27,11 +27,12 @@ const getPostBySlug = async (slug: string): Promise<{
   };
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { series: string, slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ series: string, slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { data } = await getPostBySlug(params.slug);
   const featuredImage = await getUnsplashPhoto(data.featured_image_id);
   const url = `${baseUrl}tutorials/series/${params.series}/${params.slug}`;
@@ -58,11 +59,12 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { series: string, slug: string };
-}): Promise<ReactElement> {
+export default async function Page(
+  props: {
+    params: Promise<{ series: string, slug: string }>;
+  }
+): Promise<ReactElement<any>> {
+  const params = await props.params;
   const { content, data } = await getPostBySlug(params.slug);
   return (
     <section className="content-wrapper">

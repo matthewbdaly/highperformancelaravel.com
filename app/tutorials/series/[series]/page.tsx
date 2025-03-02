@@ -28,11 +28,12 @@ const getSeriesBySlug = async (slug: string): Promise<{
   };
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { series: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ series: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { data } = await getSeriesBySlug(params.series);
   const featuredImage = await getUnsplashPhoto(data.featured_image_id);
   const url = `${baseUrl}tutorials/series/${params.series}`;
@@ -57,11 +58,12 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { series: string };
-}): Promise<ReactElement> {
+export default async function Page(
+  props: {
+    params: Promise<{ series: string }>;
+  }
+): Promise<ReactElement<any>> {
+  const params = await props.params;
   const entries = getAllTutorials().filter(data => data.series && slugify(data.series.toLowerCase()) === params.series);
   const { data } = await getSeriesBySlug(params.series);
 

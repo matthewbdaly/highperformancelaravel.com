@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
-export default function NotFound(): ReactElement {
+export default function NotFound(): ReactElement<any> {
   return (
     <section className="content-wrapper">
       <div className="content">

@@ -1,6 +1,6 @@
 import React, { BlockquoteHTMLAttributes, ReactElement } from "react"
 
-const Blockquote = ({ children, ...rest }: BlockquoteHTMLAttributes<HTMLQuoteElement>): ReactElement => {
+const Blockquote = ({ children, ...rest }: BlockquoteHTMLAttributes<HTMLQuoteElement>): ReactElement<any> => {
   return (
     <blockquote {...rest}>
       {children}
