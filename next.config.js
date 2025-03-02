@@ -4,7 +4,6 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
-  swcMinify: true,
   experimental: {
     mdxRs: false,
     typedRoutes: true
