@@ -12,7 +12,7 @@ import ListItem from "./ListItem";
 import Paragraph from "./Paragraph";
 import Pre from "./Pre";
 import UnorderedList from "./UnorderedList";
-import rehypePrism from '@mapbox/rehype-prism';
+import rehypePrism from 'rehype-prism-plus';
 import { PageFileProps } from "../app/[slug]/page";
 import { PostFileProps } from "../lib/functions";
 
