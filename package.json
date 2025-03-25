@@ -10,9 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formspree/react": "^2.5.4",
+    "@formspree/react": "^3.0.0",
     "next": "15.2.0",
     "next-image-export-optimizer": "^1.18.0",
+    "next-mdx-remote": "^5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "unsplash-js": "^7.0.18"
@@ -30,7 +31,6 @@
     "feed": "^4.2.2",
     "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
-    "next-mdx-remote": "^4.4.1",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.47",
     "prism-oceanic-next": "^1.0.0",
