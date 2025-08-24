@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next-image-export-optimizer",
+    "build": "next build --turbopack && next-image-export-optimizer",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
