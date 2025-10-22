@@ -17,7 +17,7 @@
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "rehype-prism-plus": "^2.0.0",
-    "unsplash-js": "^7.0.18"
+    "unsplash-js": "^7.0.20"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
